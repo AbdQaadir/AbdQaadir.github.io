@@ -1,6 +1,5 @@
 html {
 	scroll-behavior: smooth;
-	font-family: Nanum Gothic !important;
 }
 body {
 	margin: 0;
@@ -126,26 +125,12 @@ h4 > span {
 	margin: auto;	
 	width: 30%;
 	height: 400px;
-	box-shadow: 6px 6px 6px;
+	text-align: center;
 	transition: box-shadow .7s;
-
 }
 .proj:hover {
-box-shadow: 10px 10px 10px;
+box-shadow: 8px 8px 3px;
 }
-/*.proj .project1 {
-	width: 100%;
-	height: 380px;
-}
-.proj .project2 {
-	width: 100%;
-	height: 380px;
-	
-}
-.proj .project3 {
-	width: 100%;
-	height: 380px;
-}*/
 .proj img {
 	width: 100%;
 	height: 300px;
@@ -164,7 +149,6 @@ box-shadow: 10px 10px 10px;
 	border-radius: 3px;
 	padding: 9px;
 	color:   #5d6f83;
-	margin: 38%;
 	transition: color .4s;
 }
 .proj a:hover {
