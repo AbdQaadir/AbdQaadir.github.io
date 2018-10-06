@@ -208,7 +208,7 @@ h6 {
     text-transform: uppercase;
 }
 .con-sec p {
-	font-family: monospace;
+	font-family: Nanum Gothic;
 }
 .con-sec > i {
 	font-size: 30px;
@@ -220,7 +220,7 @@ h6 {
 	list-style-type: none;
 	color: white;
 	line-height: 2.2;
-	font-family: monospace;
+	font-family: Nanum Gothic;
 }
 #contact .con-sec ul a {
 	color: white;
