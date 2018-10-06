@@ -1,0 +1,267 @@
+ /* Style the navigation bar */
+ body{
+   margin: 0;
+ }
+.navbar {
+  /*width: 100%;*/
+  background-color: none;
+  overflow: auto;
+  position: relative;
+  top: 0;
+  font-family: verdana;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+
+}
+
+/* Navbar links */
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 14px;
+  color: gray;
+  text-decoration: none;
+  font-size: 17px;
+  
+  
+}
+
+
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  color: orange;
+}
+
+/* Current/active navbar link */
+.activea {
+  background-color: none;
+}
+
+
+.con-header {
+  /*width: 110%;*/
+  position: relative;
+  max-width: 1280px; /* Maximum width */
+  margin: 0 auto; /* Center it */
+  
+}
+.con-header > img {
+  width: 100%;
+  max-width: 1280px;
+}
+
+.con-header .content {
+  position: absolute; /* Position the background text */
+  top: 8px;
+  left: 16px;
+  color: #ff7502;
+  width: 1280px; /* Full width */
+  padding: 10px; /* Some padding */
+  max-width: -moz-available;
+  font-family: sans-serif;
+}
+h1 {
+  font-family: sans-serif;
+  font-size: 3.5rem;
+  padding-bottom: 2px !important;
+}
+html {
+  font-family: Trebuchet MS,Verdana;
+}
+h2 {
+  color: grey;
+  text-align: center;
+  font-size: 2.5rem;
+
+
+}
+h2 .red-color{
+  color: red;
+  border-bottom: 2px solid black;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.col-middle {
+  height: 25rem;
+  width: 30%;
+  background-color: lightgray;
+  
+  margin-left: 2.5%;
+  margin-top: 15px;
+
+
+}
+.row {
+  box-sizing: border-box;
+  display: flex;
+  direction: row;
+}
+.des {
+  width: 10px;
+  vertical-align: middle;
+}
+
+
+.flex-container {
+  display: flex;
+  direction: column;
+}
+
+.flex-container > div {
+    background-color: #f1f1f1;
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    height: 300px;
+    
+}
+.img {
+    width: 100%;
+    height: 100%;
+}
+
+.text-block:hover {
+opacity: 1;
+color: white;
+}
+
+
+.text-block {
+    position: absolute;
+    background-color: black;
+    opacity: .2;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 50px;
+    width: initial;
+}
+.extra {
+  border: 2px solid black;
+  padding: 15px;
+  width: 300px;
+  text-align: center;
+  margin: auto;
+  font-size: 25px;
+  text-decoration: none;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.ex {
+  border: 2px solid black;
+  padding: 15px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.extra:hover {
+  background-color: gray;
+  color: white;
+}
+
+.al-footer {
+  display: inline;
+  background-color: black;
+  color: white;
+}
+
+.company-info {
+  display: inline-block;
+  float: left;
+  width: 30%;
+  
+color: #555556;
+}
+.contact {
+  display: inline-block;
+  float: left;
+  width: 30%;
+  
+  color: #555556;
+}
+
+.services {
+  display: inline-block;
+  float: left;
+  width: 30%;
+  
+  color: #555556;
+}
+
+h3 {
+  font-size: 35px;
+  color: #555556;
+}
+/*h4 {
+  font-size: 25px;
+  color: #555556;
+}
+p {
+  font-size: 18px;
+  color: #555556;
+}*/
+ul {
+  font-size: 18px;
+  color: #555556;
+}
+
+@media screen and (max-width:1280px) {
+  .con-header{
+    width: 100%;
+  }
+
+  
+}
+
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 740px) {
+  .navbar a {
+    float: none;
+    display: inline;
+  }
+  h1 {
+    font-size: 250%;
+  }
+  h2 {
+    font-size: 100%;
+  }
+  .col-middle {
+    width: 94%;
+  }
+  .imga {
+    width: 94%;
+  }
+  .imgb {
+    width: 94%;
+  }
+  .imgc {
+    width: 94%;
+  }
+  .project-text-header {
+    font-size: 20px;
+  }
+} 
+@media screen and (max-width: 320px) {
+  .con-header{
+    width: 100%;
+
+  }
+  .imga {
+    width: 100%;
+  }
+  .imgb {
+    width: 100%;
+  }
+  .imgc {
+    width: 100%;
+  }
+  .header-image{
+    max-height: 20px;
+  }
+}
