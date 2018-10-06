@@ -23,7 +23,7 @@ body {
 }
 .navbar a {
 	transition: background-color .3s;
-    transition-timing-function: linear;
+    	transition-timing-function: linear;
 }
 
 .navbar ul li{
@@ -72,29 +72,29 @@ body {
 }
 .main-text > p{
 	font-family: inherit;
-    font-size: 23px;
-    font-style: italic;
-}
+	font-size: 23px;
+	font-style: italic;
+	}
 .our-services {
 	padding: 40px;
 }
 .our-services .ser{
 	text-align: center;
-    max-width: 400px;
-    margin: 60px auto;
-    line-height: 1.7;
-    vertical-align: middle;
-    box-sizing: content-box;
-    border: 1.5px dashed #106fdb;
-    padding: 60px 40px;
-    transition: box-shadow .4s;
+	max-width: 400px;
+	margin: 60px auto;
+	line-height: 1.7;
+	    vertical-align: middle;
+	    box-sizing: content-box;
+	    border: 1.5px dashed #106fdb;
+	    padding: 60px 40px;
+	    transition: box-shadow .4s;
 }
 .our-services .ser:hover{
 	box-shadow: 8px 8px 8px;
 } 
 .our-services .ser p {
 	font-size: 18px;
-	font-family: Montserrat;
+	font-family: Raleway;
 }
 .fa {
 	color: #106fdb;
@@ -184,16 +184,16 @@ h6 {
 	margin: auto;
 	color: white;
 	padding: 15px;
-    line-height: 1.8;
-    width: 25%;
+    	line-height: 1.8;
+    	width: 25%;
 }
 .con-sec h2 {
 	font-size: 35px;
-    font-family: monospace;
-    text-transform: uppercase;
+    	font-family: monospace;
+    	text-transform: uppercase;
 }
 .con-sec p {
-	font-family: Nanum Gothic;
+	font-family: Raleway;
 }
 .con-sec > i {
 	font-size: 30px;
@@ -237,7 +237,7 @@ h6 {
 .copyright p{
 	color: white;
 	font-size: 19px;
-	font-family: Mali;
+	font-family: Raleway;
 	text-align: center;
 	bottom: 0;
 	width: 100%;
