@@ -94,7 +94,7 @@ body {
 } 
 .our-services .ser p {
 	font-size: 18px;
-	font-family: Raleway;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 .fa {
 	color: #106fdb;
@@ -141,6 +141,7 @@ box-shadow: 8px 8px 3px;
 	text-align: center;
 	text-transform: uppercase;
 	color:  #0e3159;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
 }	
 .proj a {
 	text-decoration: none;
@@ -236,11 +237,12 @@ h6 {
 .copyright {
 	padding: 7px;
 	background-color: #424242 !important;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 .copyright p{
 	color: white;
 	font-size: 19px;
-	font-family: Raleway;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	text-align: center;
 	bottom: 0;
 	width: 100%;
