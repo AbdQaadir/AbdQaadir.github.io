@@ -207,15 +207,17 @@ h6 {
 	line-height: 2.2;
 	font-family: Nanum Gothic;
 }
-#contact .con-sec ul a {
+#contact .con-sec ul {
 	color: white;
-	font-family: monospace;
-	transition: color .3s
+	font-family: Open Sans;
+	padding-left: 0px;
+	margin-left: 0px;
+	transition: color .3s;
 }
-#contact .services ul a {
+#contact .services ul li {
 	padding-left: 0px !important;
 }
-#contact .services ul a:hover {
+#contact .services ul li:hover {
 	color:   #bbc1c8;
 }
 #contact .con-sec ul li a i{
