@@ -193,7 +193,7 @@ h6 {
     	text-transform: uppercase;
 }
 .con-sec p {
-	font-family: Raleway;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 .con-sec > i {
 	font-size: 30px;
@@ -205,7 +205,7 @@ h6 {
 	list-style-type: none;
 	color: white;
 	line-height: 2.2;
-	font-family: Nanum Gothic;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 #contact .con-sec ul {
 	color: white;
@@ -216,6 +216,7 @@ h6 {
 }
 #contact .services ul li {
 	padding-left: 0px !important;
+	transition: color .3s;
 }
 #contact .services ul li:hover {
 	color:   #bbc1c8;
