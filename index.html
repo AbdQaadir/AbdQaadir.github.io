@@ -3,96 +3,164 @@
 	<head>
 		<meta char="UTF-8">
 		<title>Home | AbdulQaadir's Portfolio</title>
-		<link rel="stylesheet" href="css/Portfolio.css">
-		<link rel="stylesheet" media="screen and (min-width: 500px)" href="css/over500.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<head>
+		<link href="https://fonts.googleapis.com/css?family=ABeeZee|Acme|Exo|Titillium+Web|Ubuntu" rel="stylesheet">
+		<link rel="stylesheet" href="css/Portfolio.css">
+	</head>
 	<body>
-		<div class="navbar" id="scroll-up">
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#about">About</a></li>
-				<li><a href="#projects">Projects</a></li>
-				<li><a href="#services">Services</a></li>
-				<li><a href="#contact">Contact</a></li>
-			</ul>
+		<nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                        <img src="02.jpeg" width="30" height="30" class="d-inline-block align-top" alt="">
+                        AbdulQaadir
+                </a>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#about">About</a>
+					</li>
+					<li class="nav-item active">
+					  <a class="nav-link" href="#contact">Projects</a>
+					</li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown active">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Services</a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Front-end Development</a>
+                        <a class="dropdown-item" href="#">Software Development</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+			  </nav>
+			  
+		<div class="container-fluid main-header" >
+			<div class="row">
+				<div class="col-md-12 main-text">
+					<h1 style="text-align: center;">LATEEF, QUADRI OLAYINKA</h1>
+					<p>...a youngster inspired to be a world class developer, passion & consistency is the fuel to the dreamland<p>
+				</div>
+			</div>
 		</div>
 
-		<div class="main-header" >
-			<div>
-				<img class="main-image" src="assets/mac-book3.jpg" alt="Coding Image">
-			</div>
-			<div class="main-text">
-				<h1 style="text-align: center;">LATEEF, QUADRI OLAYINKA</h1>
-				<p>...a youngster inspired to be a world class developer, passion & consistency is the fuel to the dreamland<p>
-			</div>
-		</div>
+		<div class="clear"></div>
 
-		<div id="services" class="our-services">
+		<div id="services" class="container">
 			<h4><span>Services</span></h4>
-			<div class="ser">
-				<h3><i class="fa fas fa-desktop"></i><br>WEBSITE DESIGN</h3>
-				<p>I design websites that are responsive on all devices including mobile phones and tablets affordable price with time respect.</p>
+			<div class="row justify-content-center">
+				<div class="col-md-7 col-lg-5 ser text-center">
+						<h3><i class="fa fas fa-desktop"></i> <div class="clear"></div> WEBSITE DESIGN</h3>
+						<p>I design websites that are responsive on all devices including mobile phones and tablets affordable price with time respect.</p>
+				</div>
+				<div class="col-md-7 col-lg-5 ser text-center">
+						<h3><i class="fa fas fa-desktop"></i> <div class="clear"></div> SOFTWARE DEVELOPMENT</h3>
+						<p>I help in developing software that solves problems of human's, technologically</p>
+				</div>
 			</div>
-			<div class="ser">
-				<h3><i class="fa fas fa-code"></i><br>WEB PROGRAMMING</h3>
-				<p>I help industries unleash their full potentials through modern and functional designs that make their competitors jealous.</p>
-			</div>
-		</div>	
+		</div>
+		<div class="clear"></div>
 
-		<div id="projects">
-			<br>
-			<h4>Recent <span>Projects</span></h4>
-			<div class="projects">
-				<div class="proj project1">
-					<img src="assets/img1.jpg" alt="University of xxxxx website">
-					<p>this is just a demo</p>
-					<a href="#" target="_blank">Visit site</a>
-				</div>
-				<div class="proj project2">
-					<img src="assets/img2.jpg" alt="Image of payment portal">
-					<p>this is just a demo</p>
-					<a href="#" target="_blank">Visit site</a>
-				</div>
-				<div class="proj project3">
-					<img src="assets/img3.jpg" alt="Image of Construction Company Website">
-					<p>this is just a demo</p>
-					<a href="#" target="_blank">Visit site</a>
-				</div>
+		<div class="container-fluid">
+			<div class="project-text">
+				<h4>Recent <span>Projects</span></h4>
+			</div>
+			<div class="clear"></div>
+			<div class="row">
+					<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+							<ol class="carousel-indicators">
+							  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+							  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+							  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+							</ol>
+							<div class="carousel-inner">
+							  <div class="carousel-item proj active">
+								<img class="d-block w-100" src="assets/slider1.jpg" alt="First slide">
+								<div class="carousel-caption d-none d-md-block">
+									<h5>DEMO 1</h5>
+									<p>This is the website designed for Emperial Surveying Company, located at Ibadan</p>
+									<a href="#" class="btn btn-outline-danger">Visit site</a>
+								</div>
+								</div>
+							  <div class="carousel-item proj">
+									<img class="d-block w-100" src="assets/slider3.jpg" alt="Second slide">
+								<div class="carousel-caption d-none d-md-block">
+									<h5>DEMO 2</h5>
+									<p>This is the website designed for Emperial Surveying Company, located at Ibadan</p>
+									<a href="#" class="btn btn-outline-danger">Visit site</a>
+								</div>
+							  </div>
+							  <div class="carousel-item proj">
+								<img class="d-block w-100" src="assets/slider1.jpg" alt="Third slide">
+								<div class="carousel-caption d-none d-md-block">
+									<h5>DEMO 3</h5>
+									<p>This is the website designed for Emperial Surveying Company, located at Ibadan</p>
+									<a href="#" class="btn btn-outline-danger">Visit site</a>
+								</div>
+							  </div>
+							</div>
+							<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+							  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							  <span class="sr-only">Previous</span>
+							</a>
+							<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+							  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+							  <span class="sr-only">Next</span>
+							</a>
+						  </div>
 			</div>
 		</div>
-		<div class="space">
-		</div>		
-		<div class="need-help">
-			<p>Need help? Contact support at +234 90 3539 4858</p>
+		
+		<div class="clear">	</div>		
+
+		<div class=" container-fluid need-help">
+			<div class="row">
+				<div class="col">
+						<p>Need help? Contact support at +234-903-539-4858</p>
+				</div>
+			</div>
+			
 		</div>
 
-		<div id="contact">
-			<div class="con-sec">
-				<h2>Address</h2>
-				<p>Lateef's House, behind S.B Hammed F/station, Barracks area, Iseyin, Oyo State, Nigeria</p>
+		<div class="container-fluid" id="contact">
+			<div class="row">
+					<div class="col-md-4 col-sm-7 contact-row justify-content-center">
+							<h2>Address</h2>
+							<p>Lateef's House, behind S.B Hammed F/station, Barracks area, Iseyin, Oyo State, Nigeria</p>
+					</div>
+					<div class="col-md-4 col-sm-7 contact-row justify-content-center">
+							<h2>Services</h2>
+							<ul>
+								<li>Website Design</li>
+								<li>Web Programming</li>
+								<li>Software Development</li>
+							</ul>						
+					</div>
+					<div class="col-md-4 col-sm-7 contact-row justify-content-center">
+							<h2>Let's connect</h2>
+							<ul>
+								<li><a href="https://web.facebook.com/quadri.abdlateef" target="_blank"><i class="fa fab fa-facebook-f"></i></a></li>
+								<li><a href="https://twitter.com/Abd_Qaadir" target="_blank"><i class="fa fab fa-twitter"></i></a></li>
+								<li><a href="mailto:Lateef9816@gmail.com" target="_blank"><i class="fa fas fa-envelope"></i></a></li>
+							</ul>
+					</div>
+				</div>
 			</div>
-			<div class="con-sec services">
-				<h2>Services</h2>
-				<ul>
-					<li>Website Design</li>
-					<li>Web Programming</li>
-					<li>Software Development</li>
-				</ul>
-			</div>
-			<div class="con-sec">
-				<h2>Let's connect</h2>
-				<ul>
-					<li><a href="https://web.facebook.com/quadri.abdlateef" target="_blank"><i class="fa fab fa-facebook-f"></i></a></li>
-					<li><a href="www.twitter.com/@Abd_Qaadir" target="_blank"><i class="fa fab fa-twitter"></i></a></li>
-					<li><a href="mailto:Lateef9816@gmail.com" target="_blank"><i class="fa fas fa-envelope"></i></a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="clear"><div>
-			<div class="copyright">
-				<p>&copy; 2018 - Quatech technologies Ltd.</p>
+			
+			<div class="container-fluid copyright">
+				<div class="row"><p>&copy; 2018 - Quatech technologies Ltd.</p></div>
 			</div>	
 		<script src="js/Portfolio.js"></script>
 	</body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </html>
