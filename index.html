@@ -5,43 +5,33 @@
 		<title>Home | AbdulQaadir's Portfolio</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link href="https://fonts.googleapis.com/css?family=ABeeZee|Acme|Exo|Titillium+Web|Ubuntu" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=ABeeZee|Acme|Exo|Titillium+Web|Ubuntu|Krub|Dosis|Audiowide|Niramit" rel="stylesheet">
 		<link rel="stylesheet" href="css/Portfolio.css">
+		<link rel="icon" type="image/png"     href="assets/favicon.ico">
 	</head>
 	<body>
-		<nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="navbar-brand" href="#">
-                        <img src="02.jpeg" width="30" height="30" class="d-inline-block align-top" alt="">
-                        AbdulQaadir
-                </a>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                      <a class="nav-link" href="#about">About</a>
+				
+				<nav class="navbar navbar-expand-lg  navbar-light fixed-top">  
+					<a class="navbar-brand" href="#"><i class="fas fa-home"></i> Home</a>
+				 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">  
+					<span class="navbar-toggler-icon"></span>
+				 </button>
+				 <div class="collapse navbar-collapse " id="navbarSupportedContent">     <ul class="navbar-nav mr-4">
+					<li class="nav-item">
+							<a class="nav-link" data-value="about" href="#about">About</a></li>  
+				 <li class="nav-item">
+						 <a class="nav-link " data-value="portfolio"href="#portfolio">Portfolio</a>    
 					</li>
-					<li class="nav-item active">
-					  <a class="nav-link" href="#contact">Projects</a>
-					</li>
-                    <li class="nav-item active">
-                      <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                    <li class="nav-item dropdown active">
-                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Services</a>
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Front-end Development</a>
-                        <a class="dropdown-item" href="#">Software Development</a>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-			  </nav>
+					<li class="nav-item"> 
+						 <a class="nav-link " data-value="blog" href="#blog">Blog</a></li>   
+				 <li class="nav-item">  
+						<a class="nav-link " data-value="services" href="#services">services</a></li>  
+				 <li class="nav-item"> 
+					<a class="nav-link " data-value="contact" href="#contact">Contact</a></li> 
+				 </ul> 
+				 </div>
+			</nav>
 			  
 		<div class="container-fluid main-header" >
 			<div class="row">
@@ -52,10 +42,28 @@
 			</div>
 		</div>
 
-		<div class="clear"></div>
+		
+	
+		
+		<div class="container" id="about">
+				<div class="clear"></div>
+				<div class="clear"></div>
+			<div class="row justify-content-center">				
+				<div class="col-md-4 col-sm-12 about-me-headtext">
+						<h4>My Story</h4>
+				</div>
+				<div class="col-md-8 col-sm-10 col-lg-6 about-me-text">
+					<p>I am Lateef Quadri Olayinka, a Front-end developer. A passionate coder, fantastic troubleshooter, and enthusiastic Front End Developer, who is vast in the knowledge of Html, Css and Javascript (React and NodeJs). Quadri has extensive experience of designing great UI and UX. He has worked with cutting edge technologies in a variety of fields, and is keen to be involved in helping to define the future of software applications and solutions.</p>
+				</div>
+			</div>
+		</div>
 
+		<div class="clear"></div>
+		
+		<!--Services-->
 		<div id="services" class="container">
-			<h4><span>Services</span></h4>
+				<div class="clear">	</div>
+				<h4>Services</h4>
 			<div class="row justify-content-center">
 				<div class="col-md-7 col-lg-5 ser text-center">
 						<h3><i class="fa fas fa-desktop"></i> <div class="clear"></div> WEBSITE DESIGN</h3>
@@ -67,96 +75,67 @@
 				</div>
 			</div>
 		</div>
+		
 		<div class="clear"></div>
 
-		<div class="container-fluid">
-			<div class="project-text">
-				<h4>Recent <span>Projects</span></h4>
-			</div>
-			<div class="clear"></div>
-			<div class="row">
-					<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-							<ol class="carousel-indicators">
-							  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-							  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-							  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-							</ol>
-							<div class="carousel-inner">
-							  <div class="carousel-item proj active">
-								<img class="d-block w-100" src="assets/slider1.jpg" alt="First slide">
-								<div class="carousel-caption d-none d-md-block">
-									<h5>DEMO 1</h5>
-									<p>This is the website designed for Emperial Surveying Company, located at Ibadan</p>
-									<a href="#" class="btn btn-outline-danger">Visit site</a>
-								</div>
-								</div>
-							  <div class="carousel-item proj">
-									<img class="d-block w-100" src="assets/slider3.jpg" alt="Second slide">
-								<div class="carousel-caption d-none d-md-block">
-									<h5>DEMO 2</h5>
-									<p>This is the website designed for Emperial Surveying Company, located at Ibadan</p>
-									<a href="#" class="btn btn-outline-danger">Visit site</a>
-								</div>
-							  </div>
-							  <div class="carousel-item proj">
-								<img class="d-block w-100" src="assets/slider1.jpg" alt="Third slide">
-								<div class="carousel-caption d-none d-md-block">
-									<h5>DEMO 3</h5>
-									<p>This is the website designed for Emperial Surveying Company, located at Ibadan</p>
-									<a href="#" class="btn btn-outline-danger">Visit site</a>
-								</div>
-							  </div>
+		<!--Project-->
+		<div id="portfolio">
+			<div class="portfolio" id="portfolio">
+					<div class="clear">	</div>
+					<h4 class="text-center">Portfolio</h4>
+					<div class="clear">	</div>
+							<div class="container">
+									<div class="row text-center justify-content-center">
+											<div class="col-lg-4 col-md-8 col-sm-9 col-xs-7 container-column">
+													<img src="assets/img1.jpg" class="img-fluid">
+													<p>This is just a Demo</p>
+													<a class="btn btn-outline-danger" href="#">Visit Site</a>
+											</div>
+											<div class="col-lg-4 col-md-8 col-sm-9 container-column">
+													<img src="assets/img2.jpg" class="img-fluid">
+													<p>This is just a Demo</p>
+													<a class="btn btn-outline-danger" href="#">Visit Site</a>
+											</div>
+											<div class="col-lg-4 col-md-8 col-sm-9 container-column">
+													<img src="assets/img3.jpg" class="img-fluid">
+													<p>This is just a Demo</p>
+													<a class="btn btn-outline-danger" href="#">Visit Site</a>
+											</div>
+									</div>
 							</div>
-							<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-							  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-							  <span class="sr-only">Previous</span>
-							</a>
-							<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-							  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-							  <span class="sr-only">Next</span>
-							</a>
-						  </div>
 			</div>
-		</div>
+	</div>
 		
 		<div class="clear">	</div>		
 
-		<div class=" container-fluid need-help">
-			<div class="row">
-				<div class="col">
-						<p>Need help? Contact support at +234-903-539-4858</p>
-				</div>
-			</div>
-			
-		</div>
-
 		<div class="container-fluid" id="contact">
-			<div class="row">
-					<div class="col-md-4 col-sm-7 contact-row justify-content-center">
-							<h2>Address</h2>
-							<p>Lateef's House, behind S.B Hammed F/station, Barracks area, Iseyin, Oyo State, Nigeria</p>
-					</div>
-					<div class="col-md-4 col-sm-7 contact-row justify-content-center">
-							<h2>Services</h2>
-							<ul>
-								<li>Website Design</li>
-								<li>Web Programming</li>
-								<li>Software Development</li>
-							</ul>						
-					</div>
-					<div class="col-md-4 col-sm-7 contact-row justify-content-center">
-							<h2>Let's connect</h2>
-							<ul>
-								<li><a href="https://web.facebook.com/quadri.abdlateef" target="_blank"><i class="fa fab fa-facebook-f"></i></a></li>
-								<li><a href="https://twitter.com/Abd_Qaadir" target="_blank"><i class="fa fab fa-twitter"></i></a></li>
-								<li><a href="mailto:Lateef9816@gmail.com" target="_blank"><i class="fa fas fa-envelope"></i></a></li>
-							</ul>
+			<div class="clear">	</div>
+			<h4 class="text-center ex-h4">Get <span>In</span> Touch</h4>
+			<div class="row justify-content-center">
+					<div class="col-md-6 col-sm-7 contact-row">
+							<p><i class="fas fa-map-marker-alt" id= "location-icon"></i> Iseyin, Oyo State, Nigeria.</p>
+														
+							<p><i class="fab fa-skype" id= "location-icon"></i> Lateef Quadri Olayinka</p>
+
+							<p><i class="fas fa-envelope" id="location-icon"></i> Lateef9816@gmail.com</p>
+							
+							<p><i class="fas fa-phone" id="location-icon"></i> +234 903-539-4858</p>
 					</div>
 				</div>
+				
+			
 			</div>
 			
-			<div class="container-fluid copyright">
-				<div class="row"><p>&copy; 2018 - Quatech technologies Ltd.</p></div>
+			<div class="container copyright">
+					<div class="row justify-content-center">
+							<div class="col-md-6 text-center social-icons">
+							<a href="https://web.facebook.com/quadri.abdlateef" target="_blank"><i class="fab fa-facebook-f"></i></a>
+							<a href="https://twitter.com/Abd_Qaadir" target="_blank"><i class="fab fa-twitter"></i></a>
+							<a href="mailto:Lateef9816@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+							<a href="https://github.com/AbdQaadir"><i class="fab fa-github"></i></a>
+						</div>
+					</div>
+				<div class="row"><p>Designed and Developed by Lateef, Quadri Olayinka</p></div>
 			</div>	
 		<script src="js/Portfolio.js"></script>
 	</body>
