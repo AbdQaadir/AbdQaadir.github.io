@@ -41,9 +41,10 @@ body {
 	background: url(../assets/macbook4.png) no-repeat center center;
 	background-size: cover;
 	width: 100%;
+	min-height: 100vh;
 }
 .main-text {
-	padding-top: 15px;
+	top: 40vh;
 	margin: auto;
 	text-align: center;
 	color:  #e4f2f7;
@@ -55,6 +56,7 @@ body {
 	font-size: 60px;
 	line-height: 5rem;
 	font-family: 'Krub', sans-serif;
+	font-weight: 700;
 }
 .main-text p{
 	font-size: 20px;
@@ -72,24 +74,19 @@ body {
 	/* text-align: center; */
 	margin: 40px 5%;
 	/* box-sizing: content-box; */
-	border: 1.5px dashed #106fdb;
+	/* border: 1.5px dashed #106fdb; */
 	padding: 60px 40px;
-	transition: box-shadow .4s;
 	line-height: 2;
-	font-size: 18px;
-	box-shadow: 8px 8px 8px grey;
+	box-shadow: 4px 4px 4px 4px grey;
 }
-.ser:hover{
-	
-} 
 .ser p{
 	font-family: 'Titillium Web', sans-serif;
+	font-size: 18px;
 }
 .fa {
 	color: #106fdb;
 	text-align: center;
-	font-size: 40px;
-
+	font-size: 30px;
 }
 h3 {
 	font-size: 25px;
@@ -116,15 +113,10 @@ h4 span{
 .portfolio{
     position: relative; 
    }
-   .portfolio h1{
-    color:#F97300;
-	margin: 2em;
-	font-family: 'Titillium Web', sans-serif;
-   }
-   .portfolio p{
+.portfolio p{
 	font-family: 'Krub', sans-serif;
 	padding-top: 10px;
-   }
+}
    .portfolio a{font-family: 'Krub', sans-serif;}
    .portfolio img{
      height: 15rem;
@@ -149,8 +141,6 @@ h6 {
 	padding: 0px;
 }
 .contact-row {
-	/* margin-top: 20px; */
-	/* margin-bottom: 20px; */
 	font-family: 'Dosis', sans-serif;
 	padding: 4%;
 	line-height: 1.9;
@@ -214,75 +204,4 @@ h6 {
 }
 .clear {
 	clear: both;
-}
-
-
-
-
-@media only screen and (max-width: 600px) {
-    .main-text h1{
-		font-size: 55px;
-		padding-top: 50px;
-	}
-    .main-text p{
-		font-size: 20px;
-		padding-top: 10px;
-	}
-	.need-help p{
-		font-size: 15px;
-	}
-	h2 {
-		font-size: 40px;
-	}
-	.about-me-headtext{
-		margin-bottom: 25px;
-	}
-	.about-me-text{
-		padding-left: 20px;
-		padding-right: 20px;
-	}
-	.social-icons a{
-		font-size: 30px;
-	}
-	.contact-row {
-		font-size: 18px;
-	}
-	.copyright p {
-		font-size: 13px;
-	}
-	
-}
-@media only screen and (min-width: 600px) and (max-width: 767px) { 
-	.main-text h1{
-		/* font-size: 55px; */
-		padding-top: 50px;
-	}
-	.need-help {
-		font-size: 25px;
-	}
-	.about-me-text{
-		border: none;
-		text-align: justify;
-	}
-	.social-icons a{
-		font-size: 30px;
-	}
-	.copyright p {
-		font-size: 17px;
-	}
- }
-
-@media only screen and (max-width: 400px) { 
-	.main-header {
-	background: url(../assets/macbook4.png) no-repeat center center;
-	background-size: cover;
-	width: 100%;
-	max-height: 150vh;
-	}
-	.main-text > h1{
-	margin-top: 10px;
-	font-size: 40px;
-	line-height: 5rem;
-	font-family: 'Krub', sans-serif;
-	}
 }

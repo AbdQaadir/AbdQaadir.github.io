@@ -1,0 +1,236 @@
+@media only screen and (min-width: 425px) and (max-width: 768px) { 
+	.navbar a {
+		font-size: 15px;
+	}
+	.main-header {
+		background: url(../assets/macbook4.png) no-repeat center center;
+		background-size: cover;
+		width: 100%;
+		max-height: 70vh;
+	}
+	.main-text {
+		top: 40vh;
+		margin: auto;
+		text-align: center;
+		color:  #e4f2f7;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	.main-text > h1{
+		margin-top: 10px;
+		font-size: 40px;
+		line-height: 2rem;
+		font-family: 'Krub', sans-serif;
+		font-weight: 600;
+	}
+	.main-text p{
+		font-size: 15px;
+		font-style: italic;
+		font-family: 'Titillium Web', sans-serif;
+	}
+	h4 {
+		font-size: 27px;
+		text-align: center;
+		text-transform: uppercase;
+		font-family: 'Audiowide', cursive;
+		color: rgb(131, 128, 128);
+		padding-top: 35px;	
+	}
+	.social-icons a {
+		font-size: 35px;
+		margin: 10px;
+	}
+	.contact-row {
+		font-family: 'Dosis', sans-serif;
+		padding: 4%;
+		line-height: 1.9;
+		font-size: 18px;
+	}
+	h3 {
+		font-size: 18px;
+	}
+	.ser p{
+		font-family: 'Titillium Web', sans-serif;
+		font-size: 14px;
+	}
+ }
+@media only screen and (min-width: 375px) and (max-width: 425px) { 
+	.navbar a {
+		font-size: 13px;
+	}
+	.main-header {
+		background: url(../assets/macbook4.png) no-repeat center center;
+		background-size: cover;
+		width: 100%;
+		max-height: 50vh;
+	}
+	.main-text {
+		top: 40vh;
+		margin: auto;
+		text-align: center;
+		color:  #e4f2f7;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	.main-text > h1{
+		margin-top: 10px;
+		font-size: 30px;
+		line-height: 2rem;
+		font-family: 'Krub', sans-serif;
+		font-weight: 500;
+	}
+	.main-text p{
+		font-size: 15px;
+		font-style: italic;
+		font-family: 'Titillium Web', sans-serif;
+	}
+	h4 {
+		font-size: 22px;
+		text-align: center;
+		text-transform: uppercase;
+		font-family: 'Audiowide', cursive;
+		color: rgb(131, 128, 128);
+		padding-top: 20px;
+		padding-bottom: 5px;	
+	}
+	.about-me-text {
+		font-family: 'Titillium Web', sans-serif;
+		font-size: 15px;
+		padding-right: 20px;
+		padding-left: 25px;
+		text-align: justify;
+	}
+	.container-column{
+		max-width: 80vw;
+	}
+	.portfolio p{
+		font-family: 'Krub', sans-serif;
+		padding-top: 15px;
+		font-size: 12px;
+	}
+	.portfolio a{font-family: 'Krub', sans-serif; font-size: 10px;}
+   .portfolio img{
+     height: 15rem;
+     width: 100%;
+     /* margin: 1em; */
+   }
+	.social-icons a {
+		font-size: 25px;
+		margin: 10px;
+	}
+	.contact-row {
+		font-family: 'Dosis', sans-serif;
+		padding: 4%;
+		line-height: 1.9;
+		font-size: 15px;
+		margin-left: 8vw;
+	}
+	h3 {
+		font-size: 18px;
+	}
+	.ser p{
+		font-family: 'Titillium Web', sans-serif;
+		font-size: 14px;
+	}
+	.ser {
+		max-width: 70vw;
+		max-height: 70vh;
+	}
+	.ser i {
+		font-size: 25px;
+	}
+	.copyright p{
+		font-size: 13px;
+	}
+ }
+@media only screen and (max-width: 320px) { 
+	.navbar a {
+		font-size: 13px;
+	}
+	.main-header {
+		background: url(../assets/macbook4.png) no-repeat center center;
+		background-size: cover;
+		width: 100%;
+		max-height: 50vh;
+	}
+	.main-text {
+		top: 40vh;
+		margin: auto;
+		text-align: center;
+		color:  #e4f2f7;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	.main-text > h1{
+		margin-top: 10px;
+		font-size: 30px;
+		line-height: 2rem;
+		font-family: 'Krub', sans-serif;
+		font-weight: 600;
+	}
+	.main-text p{
+		font-size: 15px;
+		font-style: italic;
+		font-family: 'Titillium Web', sans-serif;
+	}
+	h4 {
+		font-size: 22px;
+		text-align: center;
+		text-transform: uppercase;
+		font-family: 'Audiowide', cursive;
+		color: rgb(131, 128, 128);
+		padding-top: 20px;
+		padding-bottom: 5px;	
+	}
+	.about-me-text {
+		font-family: 'Titillium Web', sans-serif;
+		font-size: 15px;
+		padding-right: 20px;
+		padding-left: 25px;
+		text-align: justify;
+	}
+	.container-column{
+		max-width: 80vw;
+	}
+	.portfolio p{
+		font-family: 'Krub', sans-serif;
+		padding-top: 15px;
+		font-size: 12px;
+	}
+	.portfolio a{font-family: 'Krub', sans-serif; font-size: 10px;}
+   .portfolio img{
+     height: 15rem;
+	 width: 100%;
+	 max-height: 50%;
+     /* margin: 1em; */
+   }
+	.social-icons a {
+		font-size: 25px;
+		margin: 10px;
+	}
+	.contact-row {
+		font-family: 'Dosis', sans-serif;
+		padding: 4%;
+		line-height: 1.9;
+		font-size: 15px;
+		margin-left: 8vw;
+	}
+	h3 {
+		font-size: 18px;
+	}
+	.ser p{
+		font-family: 'Titillium Web', sans-serif;
+		font-size: 12px;
+	}
+	.ser {
+		max-width: 70vw;
+		max-height: 80vh;
+		padding: 18px 10px;
+	}
+	.ser i {
+		font-size: 25px;
+	}
+	.copyright p{
+		font-size: 13px;
+	}
+}
