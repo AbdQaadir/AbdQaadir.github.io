@@ -135,7 +135,6 @@
 	}
 	.ser {
 		max-width: 70vw;
-		max-height: 70vh;
 	}
 	.ser i {
 		font-size: 25px;
@@ -226,7 +225,6 @@
 	}
 	.ser {
 		max-width: 70vw;
-		max-height: 80vh;
 		padding: 18px 10px;
 	}
 	.ser i {
