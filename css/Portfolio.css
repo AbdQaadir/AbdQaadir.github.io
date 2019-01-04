@@ -205,3 +205,6 @@ h6 {
 .clear {
 	clear: both;
 }
+.btn-outline-danger{
+	margin-bottom: 3rem;
+}
