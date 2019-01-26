@@ -41,6 +41,10 @@
   }
 }
 @media only screen and (min-width: 290px) and (max-width: 360px) {
+	.navbar-brand{
+		font-size: 1.1rem;
+		margin-right: 0 !important;
+	}
   html {
     padding: 0 !important;
   }
