@@ -175,8 +175,6 @@ body {
 .main-btn:hover{
 	background-image: linear-gradient(to left top, #05b7c8, #00acb7, #00a1a6, #009695, #008b85);
 	background-image: linear-gradient(to left top, #05b7c8, #00acb7, #00a1a6, #009695, #008b85);
-	transform: translateX(20%);
-	transform: scale(1.07);
 	border: none !important;
 	outline: none;
 }
