@@ -1,4 +1,9 @@
 @media only screen and (min-width: 425px) and (max-width: 768px) {
+  .navbar{
+    background-color: #fff;
+	color: black;
+  box-shadow: 0 1px 30px rgba(0,0,0,.1);
+  }
   .wrap {
     font-size: 1.2rem;
     line-height: 1.4 !important;

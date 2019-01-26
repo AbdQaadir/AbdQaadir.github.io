@@ -82,7 +82,8 @@ body {
 
 
 .nav-link{
-	margin-right: 1em !important; 
+	margin-right: .6em !important; 
+	font-size: .8rem;
 }
 
 .navbar-brand{
@@ -96,6 +97,9 @@ body {
 .navbar-collapse{ justify-content: flex-end;}
 
 .navbar-toggler{  background:transparent !important; outline: none !important;}
+.fa-list-ul{
+	font-size: 2rem;
+}
 .navbar a {
 	color: black !important;
 }
