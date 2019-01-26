@@ -1,9 +1,69 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,600);
+
+body{background:#FFF;
+	font-family:'Roboto Mono',monospace !important;
+	overflow-x:hidden}
 html {
 	scroll-behavior: smooth;
 }
-body {
-	background-color: #f7f7f7;
+.preloader {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #FFF no-repeat center center;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background-repeat: no-repeat;
+
 }
+.hidePreloader {
+  display: none !important;
+}
+a {text-decoration: none;}
+.section-title h5{
+	font-size: 2rem;
+	font-weight: 500;
+	text-align: center;
+	text-transform: capitalize;
+	margin: 8vh 0;
+}
+h3 {
+	font-size: 22px;
+	font-weight: bold;
+}
+
+/* scroll */
+	/* scroll width */
+	::-webkit-scrollbar {
+	width: 13px;
+	cursor: pointer;
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey; 
+	border-radius: 10px;
+	}
+
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+	background: rgb(27, 157, 161); 
+	border-radius: 10px;
+	transition: all 0.7s ease-in-out;
+	cursor: pointer;
+	}
+
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+	background: #037ab1; 
+	cursor: pointer;
+	}
+/* end of scroll */
+
 * {
     box-sizing: border-box;
 }
@@ -12,120 +72,217 @@ body {
 }
 body {
 	margin: 0;
-	font-family: Trebuchet MS,Verdana;
 	font-size: 18px;
 }
 
 /*Navigation Bar*/
-.navbar{ background:#106fdb; text-transform: uppercase; font-family: 'Niramit', sans-serif; font-size: 17px;}
-/*former: color: #F97300;*/
+.navbar{ background: transparent; 
+	text-transform: capitalize;
+	font-size: 17px; padding-top: 2rem; }
 
-.nav-link , .navbar-brand{ color: #f4f4f4; cursor: pointer;}
 
-.nav-link{ margin-right: 1em !important;}
+.nav-link{
+	margin-right: 1em !important; 
+}
 
-.navbar-brand:hover{ color: #e6e3e3; }
-.nav-link:hover{ background: #f4f4f4; color: #106fdb; }
+.navbar-brand{
+	border-radius: 1rem;
+	color: black !important;
+	background: #f9fafc;
+	cursor: pointer;
+}
+.navbar-brand:hover{ color: #e6e3e3;}
 
 .navbar-collapse{ justify-content: flex-end;}
 
-.navbar-toggler{  background:#fff !important;}
+.navbar-toggler{  background:transparent !important; outline: none !important;}
 .navbar a {
-	color: white !important;
+	color: black !important;
 }
-.navbar li a:hover{
-	color: #106fdb !important;
+.navbar-change{
+	background-color: #fff;
+	color: black;
+	box-shadow: 0 1px 30px rgba(0,0,0,.1);
 }
+/* end of nav bar */
 
+/* start of main header */
 .main-header {
-	background: url(../assets/macbook4.png) no-repeat center center;
+	background: url(../assets/main-image2.jpeg);
 	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
 	width: 100%;
 	min-height: 100vh;
+	border-bottom-left-radius: 50% 20%;
+    border-bottom-right-radius: 50% 20%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+	align-items: center;
+	justify-content: center;
+	position: relative;
 }
+.overlay{
+	border-bottom-left-radius:50% 20%;
+	border-bottom-right-radius:50% 20%;
+	background:#2dce89;
+	background:-webkit-linear-gradient(to left top, #08f4ff, #07fcdd, #67ffae, #abff77, #eef643);
+	background: linear-gradient(to left top, #08f4ff, #07fcdd, #67ffae, #abff77, #eef643);
+	opacity:.7;
+	position:absolute;
+	right:0;
+	width:100%;
+	height:100%;
+	left:0;
+	top:0
+}
+
+
 .main-text {
-	top: 40vh;
-	margin: auto;
-	text-align: center;
-	color:  #e4f2f7;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	max-width: 80vw;
 }
-.main-text > h1{
-	margin-top: 10px;
-	font-size: 60px;
-	line-height: 5rem;
-	font-family: 'Krub', sans-serif;
-	font-weight: 700;
+.main-call{
+	font-size: 0.9rem !important;
+	margin-top: 5px;
 }
-.main-text p{
-	font-size: 20px;
-	font-style: italic;
-	font-family: 'Titillium Web', sans-serif;
+.typewrite{
+	text-decoration: none;
+	font-size: 2rem;
+}
+.typewrite:hover{
+	text-decoration: none;
+	cursor: text;
+}
+.main-btn {
+	font-size: 1.4rem;
+	border-color: #fff !important;
+	background: transparent;
+	transition: all 0.2s ease-in-out;
+	outline: none;
+}
+.main-btn:hover{
+	background-image: linear-gradient(to left top, #05b7c8, #00acb7, #00a1a6, #009695, #008b85);
+	background-image: linear-gradient(to left top, #05b7c8, #00acb7, #00a1a6, #009695, #008b85);
+	transform: translateX(20%);
+	transform: scale(1.07);
+	border: none !important;
+	outline: none;
+}
+.main-text > p{
+	font-size: 3rem;
+	font-weight: 450;
 	}
-.about-me-text {
-	font-family: 'Titillium Web', sans-serif;
-	border-left: 2px solid grey;
+	/* end of main header */
+
+	/* start of about me */
+.avatar-image{
+	height: 350px;
+	width: 350px;
+
 }
-.our-services {
-	padding: 40px;
+
+.about .row p {
+	font-size: 1rem;
+	font-weight: 350;
+	line-height: 1.7;
 }
-.ser{
-	/* text-align: center; */
-	margin: 40px 5%;
-	/* box-sizing: content-box; */
-	/* border: 1.5px dashed #106fdb; */
-	padding: 60px 40px;
+.about .row ul{
+	padding-left: 0;
+}
+.about .row ul li {
+	font-size: 1.2rem;
+	text-transform: capitalize;
+	border-bottom: 1px solid gray;
+	list-style-type: none !important;
 	line-height: 2;
-	box-shadow: 4px 4px 4px 4px grey;
 }
-.ser p{
-	font-family: 'Titillium Web', sans-serif;
-	font-size: 18px;
+.about .row span {
+	position: absolute;
+	right: 0;
+	font-size: 1.2rem;
 }
-.fa {
-	color: #106fdb;
-	text-align: center;
-	font-size: 30px;
+/* end of about me */
+
+/* services */
+.services{
+	padding: 50px 25px;
+	box-sizing: border-box;
+	border: 1px solid white;
+	box-shadow: 1px 1px 6px 1px #c0c0c0;
+	min-height: 0vh;
+	margin: 0 3vw;
 }
-h3 {
-	font-size: 25px;
-	font-family: 'Niramit', sans-serif;
-	font-weight: bold;
+.services i{
+	font-size: 3rem;
+	color: #009695;
+	padding: 10px 0;
 }
-h4 {
-	font-size: 40px;
-	text-align: center;
-	text-transform: uppercase;
-	font-family: 'Audiowide', cursive;
-	color: rgb(131, 128, 128);
-	padding-top: 35px;	
+.services p{
+font-size: 1rem;
+line-height: 1.5;
+text-align: justify;
+padding: 3px 5px;
 }
-h4 span{
-	border-bottom: 3px solid rgb(202, 211, 238);
-	border-radius: 4px;
+/* end of services */
+
+
+
+/* projects*/
+.project, .services{
+	margin-top: 30px;
 }
-.ex-h4 {
-	color: #c1c1c1;
+.project img{
+	max-width: 100%;
+	height: 40vh;
 }
 
-/* Portfolio*/
-.portfolio{
-    position: relative; 
-   }
-.portfolio p{
-	font-family: 'Krub', sans-serif;
-	padding-top: 10px;
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
 }
-   .portfolio a{font-family: 'Krub', sans-serif;}
-   .portfolio img{
-     height: 15rem;
-     width: 100%;
-     /* margin: 1em; */
-   }
-   .container-column {margin-bottom: 15px;}
 
-a {text-decoration: none;}
+.overlay-project {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease-in-out;
+}
+
+.project:hover .overlay-project {
+  height: 100%;
+  cursor: pointer;
+}
+
+.overlay-project-text {
+	opacity: 1;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* end of projects */
+
+
 
 
 #contact {
@@ -141,13 +298,9 @@ h6 {
 	padding: 0px;
 }
 .contact-row {
-	font-family: 'Dosis', sans-serif;
 	padding: 4%;
 	line-height: 1.9;
-	font-size: 23px;
-}
-.contact-row h2 {
-	font-family: 'Titillium Web', sans-serif;
+	font-size: 17px;
 }
 #contact div ul {
 	list-style-type: none;
@@ -170,17 +323,17 @@ h6 {
 	line-height: 2;
 }
 .social-icons a {
-	font-size: 45px;
+	font-size: 40px;
 	margin: 10px;
 }
 .social-icons a i{
-	color:  #d6dada;
-	transition: color .3s;
+	color:  #cbcfcf;
+	transition: color .3s ease-in-out;
 	margin-top: 30px;
 	margin-bottom: 15px;
 }
 .social-icons a i:hover{
-	color:  #b9c4c4;
+	color:  #b0b1b1;
 }
 .copyright {
 	background: #232526;  /* fallback for old browsers */
@@ -194,13 +347,15 @@ h6 {
 }
 .copyright p{
 	color: white;
-	font-size: 16px;
-	font-family: 'Exo', sans-serif;
+	font-size: 14px;
 	text-align: center;
 	width: 100%;
 	margin-top: 10px;
 	margin-bottom: 30px;
 	
+}
+.copyright p i {
+	color: red;
 }
 .clear {
 	clear: both;

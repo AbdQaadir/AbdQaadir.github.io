@@ -6,113 +6,186 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-		<link href="https://fonts.googleapis.com/css?family=ABeeZee|Acme|Exo|Titillium+Web|Ubuntu|Krub|Dosis|Audiowide|Niramit" rel="stylesheet">
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="css/Portfolio.css">
 		<link rel="stylesheet" href="css/responsiveness.css">
 		<link rel="icon" type="image/png"     href="assets/favicon.ico">
 	</head>
 	<body>
+		<!-- preloader -->
+		<div class="preloader d-flex justify-content-center align-items-center">
+			<img src="/assets/preloader.gif" alt="preloader">
+		</div>
+		<!-- end preloader -->
 				
 				<nav class="navbar navbar-expand-lg  navbar-light fixed-top">  
-					<a class="navbar-brand" href="#"><i class="fas fa-home"></i> Home</a>
+					<a href="#" class="navbar-brand py-2 px-4 mx-5" href="#">ABD_QAADIR</a>
 				 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">  
-					<span class="navbar-toggler-icon"></span>
+					<span class="fas fa-list-ul"></span>
 				 </button>
 				 <div class="collapse navbar-collapse " id="navbarSupportedContent">     <ul class="navbar-nav mr-4">
 					<li class="nav-item">
-							<a class="nav-link" data-value="about" href="#about">About</a></li>  
-				 <li class="nav-item">
-						 <a class="nav-link " data-value="portfolio"href="#portfolio">Portfolio</a>    
+							<a class="nav-link" data-value="#" href="#"><i class="fas fa-city"></i> Home</a>
+					</li>  
+					<li class="nav-item">
+							<a class="nav-link" data-value="about" href="#about"><i class="fas fa-user"></i> About me</a>
+					</li>  
+					<li class="nav-item">
+						<a class="nav-link " data-value="services" href="#services"><i class="fas fa-briefcase"></i> services</a>
+					</li>
+				 	<li class="nav-item">
+						 <a class="nav-link " data-value="Projects"href="#projects"><i class="fas fa-clipboard-list"></i> Portfolio</a>    
 					</li>
 					<li class="nav-item"> 
-						 <a class="nav-link " data-value="blog" href="#blog">Blog</a></li>   
-				 <li class="nav-item">  
-						<a class="nav-link " data-value="services" href="#services">services</a></li>  
-				 <li class="nav-item"> 
-					<a class="nav-link " data-value="contact" href="#contact">Contact</a></li> 
+						 <a class="nav-link " data-value="blog" href="#blog"><i class="fas fa-pen-nib"></i> blog</a></li>   
+					<li class="nav-item"> 
+						<a class="nav-link " data-value="contact" href="#contact"><i class="fas fa-address-book"></i> contact</a>
+					</li> 
 				 </ul> 
 				 </div>
 			</nav>
-			  
+
+
+	
 		<div class="container-fluid main-header" >
+			<div class="overlay"></div>
 			<div class="row">
 				<div class="col-md-12 main-text">
-					<h1 style="text-align: center;">LATEEF, QUADRI OLAYINKA</h1>
-					<p>...a youngster inspired to be a world class developer, passion & consistency is the fuel to the dreamland<p>
+					<p>
+						<a class="typewrite" data-period="2000" data-type='[ "Welcome to my Portfolio", "Hi, I&#39;m Lateef Qaadir Olayinka.", "I am Creative.", "I am a Front-end Developer.", "I Love Design.", "I Love to Develop.", "I can help you design and develop responsive websites" ]'>
+							<span class="wrap"></span>
+						</a>
+					</p>
+					<div class="float-left">
+						<a href="#about"><button href="about" class="main-btn btn py-2 px-3">Get started <i class="fas fa-arrow-down"></i></button></a>
+					</div>
+					<div class="float-right py-5 px-5  mx-5">
+						<p class="main-call">CALL: +234 9035394858</p> 
+						<p class="main-call">For any inquiry or questions.</p> 
+					</div>
+					
+					
+					
 				</div>
 			</div>
 		</div>
 
 		
-	
-		
-		<div class="container" id="about">
+		<!--about me  -->
+		<div class="container about" id="about">
 				<div class="clear"></div>
 				<div class="clear"></div>
-			<div class="row justify-content-center">				
-				<div class="col-md-4 col-sm-12 about-me-headtext">
-						<h4>My Story</h4>
+			<div class="row justify-content-center align-items-center">				
+
+				<div class="about-col order-3 col-lg-4 col-md-10 col-sm-10 text-center py-7">
+					<img class="avatar-image" src="assets/avatar1.png" alt="avatar-image">
 				</div>
-				<div class="col-md-8 col-sm-10 col-lg-6 about-me-text">
-					<p>I am Lateef Quadri Olayinka, a Front-end developer. A passionate coder, fantastic troubleshooter, and enthusiastic Front End Developer, who is vast in the knowledge of Html, Css and Javascript (React and NodeJs). Quadri has extensive experience of designing great UI and UX. He has worked with cutting edge technologies in a variety of fields, and is keen to be involved in helping to define the future of software applications and solutions.</p>
+
+				<div class="about-col order-1 col-lg-4 col-md-10 col-sm-10">
+					<!-- section title -->
+					<div class="section-title">
+						<h5>Short Bio</h5>
+					</div>			
+					<!-- end of section title -->
+					<p>Hello! I&#39;m Lateef Quadri Olayinka.</p>
+					<p>I&#39;m a Front-end developer. A passionate coder and a fantastic troubleshooter.</p> 
+					<p>I&#39;m passionate about developing and designing responsive websites.</p>
+					<p>I write technical articles on my blog.</p>
+				    <a href="/assets/My CV.pdf" download><button class="btn btn-outline-info">Download Resume <i class="fas fa-download"></i> </button></a>
+				</div>
+
+				<div class="about-col order-2 col-lg-4 col-md-10 col-sm-10">
+					<div class="section-title">
+						<h5>Skills</h5>
+					</div>
+					<ul>
+						<li>Html5 <span><i class="fab fa-html5"></i></span> </li>
+						<li>CSS3 <span><i class="fab fa-css3-alt"></i></span> </li>
+						<li>bootstrap4 <span><img src="/assets/bootstrap-logo.jpg" alt="bootstrap-logo"  width="20" height="20"></span> </li>
+						<li>jquery <span><img src="/assets/jquery-logo.png" alt="jquery-logo" width="20" height="20"></span> </li>
+						<li>Javascript <span><i class="fab fa-js"></i></span> </li>
+						<li>React <span><i class="fab fa-react"></i></span> </li>
+					</ul>
 				</div>
 			</div>
 		</div>
+		<!--end of about me  -->
 
 		<div class="clear"></div>
 		
 		<!--Services-->
 		<div id="services" class="container">
 				<div class="clear">	</div>
-				<h4>Services</h4>
-			<div class="row justify-content-center">
-				<div class="col-md-7 col-lg-5 ser text-center">
-						<h3><i class="fa fas fa-code"></i> <div class="clear"></div> WEBSITE DESIGN</h3>
-						<p>I design websites that are responsive on all devices including mobile phones and tablets affordable price with time respect.</p>
+				<!-- section title -->
+				<div class="section-title">
+					<h5>Services</h5>
 				</div>
-				<div class="col-md-7 col-lg-5 ser text-center">
-						<h3><i class="fa fas fa-desktop"></i> <div class="clear"></div> SOFTWARE DEVELOPMENT</h3>
+				<!-- end of section title -->
+			<div class="row justify-content-center">
+				<div class="col-md-9 col-lg-5 col-sm-10 services ">
+					<i class="fas fa-laptop"></i>
+					<h3> WEBSITE DESIGN</h3>
+					<p>I design websites that are responsive on all devices including mobile phones and tablets affordable price with time respect.</p>
+				</div>
+
+				<div class="col-md-9 col-lg-5 col-sm-10 services ">
+						<i class="fas fa-desktop"></i> 
+						<h3>SOFTWARE DEVELOPMENT</h3>
 						<p>I help in developing software that solves humans' problems</p>
 				</div>
+
 			</div>
 		</div>
-		
+		<!-- end of services -->
 		<div class="clear"></div>
 
-		<!--Project-->
-		<div id="portfolio">
-			<div class="portfolio" id="portfolio">
-					<div class="clear">	</div>
-					<h4 class="text-center">Portfolio</h4>
-					<div class="clear">	</div>
-							<div class="container">
-								<div class="row text-center justify-content-center">
-									<div class="col-lg-12 col-md-10 col-sm-10 col-xs-10 container-column">
-										<img src ="/assets/ss1.jpg" alt="Javascript Calculator">
-										<p>Javascript Calculator</p>
-										<a class="btn btn-outline-danger" href="https://codepen.io/Lateef9816/full/qLxKEw" target="_blank">Visit</a>
-									</div>
-									<div class="col-lg-12 col-md-10 col-sm-10 col-xs-10 container-column">
-										<img src ="/assets/ss2.jpg" alt="Pass the message project">
-										<p>Pass the Message Project</p>
-										<a class="btn btn-outline-danger" href="https://codepen.io/Lateef9816/full/GPyzZN" target="_blank">Visit</a>
-									</div>
-									<div class="col-lg-12 col-md-10 col-sm-10 col-xs-10 container-column">
-										<img src ="//assets/ss3.jpg" alt="Random Hadith Displayer">
-										<p>Random Hadith Of Prophet Muhammad</p>
-										<a class="btn btn-outline-danger" href="https://codepen.io/Lateef9816/full/ebybQK" target="_blank">Visit</a>
-									</div>
-							</div>
-							</div>
+		<!--Projects-->
+		<div class="container" id="projects">
+			<div class="clear"></div>
+			<!-- section title -->
+			<div class="section-title">
+				<h5>Recent Projects</h5>
 			</div>
-	</div>
-		
+			<!-- end of section title -->
+			<div class="row justify-content-center">
+				<div class=" project col-lg-4 col-md-8 col-sm-10">
+					<a href="https://codepen.io/Lateef9816/full/qLxKEw" target="_blank">
+						<img src="/assets/ss1.JPG" alt="project-image-1" class="image">
+						<div class="overlay-project">
+							<div class="overlay-project-text">Javascript Calculator</div>
+						</div>
+					</a>
+				</div>
+				<div class="project col-lg-4 col-md-8 col-sm-10">
+					<a href="https://codepen.io/Lateef9816/full/gZoqrg" target="_blank">
+						<img src="/assets/ss2.JPG" alt="project-image-2" class="image">
+						<div class="overlay-project">
+							<div class="overlay-project-text">Sending Message To One's self</div>
+						</div>
+					</a>
+				</div>
+				<div class="project col-lg-4 col-md-8 col-sm-10">
+					<a href="https://codepen.io/Lateef9816/full/ebybQK" target="_blank">
+						<img src="/assets/ss3.JPG" alt="project-image-3" class="image">
+						<div class="overlay-project">
+							<div class="overlay-project-text">Random Statement Generator</div>
+						</div>	
+						</a>
+				</div>
+
+			</div>
+		</div>
+		<!-- end of Projects -->
+		<!--  -->
 		<div class="clear">	</div>		
 
 		<div class="container-fluid" id="contact">
 			<div class="clear">	</div>
-			<h4 class="text-center ex-h4">Get <span>In</span> Touch</h4>
+			<!-- section title -->
+			<div class="section-title">
+				<h5>Contact me</h5>
+			</div>
+			<!-- end of section title -->
 			<div class="row justify-content-center">
 					<div class="col-md-6 col-sm-7 contact-row">
 							<p><i class="fas fa-map-marker-alt" id= "location-icon"></i> Iseyin, Oyo State, Nigeria.</p>
@@ -137,9 +210,10 @@
 							<a href="https://github.com/AbdQaadir"><i class="fab fa-github"></i></a>
 						</div>
 					</div>
-				<div class="row"><p>Designed and Developed by Lateef, Quadri Olayinka</p></div>
+				<div class="row">
+					<p>Designed and Developed with <i class="fas fa-heart"></i> by Lateef, Qaadir Olayinka.</p></div>
 			</div>	
-<!-- 		<script src="js/Portfolio.js"></script> -->
+		<script src="js/script.js"></script>
 	</body>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
