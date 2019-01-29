@@ -1,6 +1,6 @@
 @media only screen and (min-width: 425px) and (max-width: 768px) {
   .navbar{
-    background-color: #fff !important;
+    background: #fff !important;
 	color: black;
   box-shadow: 0 1px 30px rgba(0,0,0,.1);
   }
@@ -22,7 +22,7 @@
 }
 @media only screen and (min-width: 375px) and (max-width: 425px) {
 	 .navbar{
-    background-color: #fff !important;
+    background: #fff !important;
 	color: black;
   box-shadow: 0 1px 30px rgba(0,0,0,.1);
   }
@@ -47,7 +47,7 @@
 }
 @media only screen and (min-width: 290px) and (max-width: 360px) {
 	 .navbar{
-    background-color: #fff !important;
+    background: #fff !important;
 	color: black;
   box-shadow: 0 1px 30px rgba(0,0,0,.1);
   }
