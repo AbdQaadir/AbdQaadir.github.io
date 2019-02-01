@@ -1,3 +1,9 @@
+//Preloader
+window.addEventListener("load", () =>
+    document.querySelector(".preloader").classList.add("hidePreloader")
+);
+
+
 //SCROLL EFFECT
 // let bar = document.querySelector("#progress");
 let navBar = document.querySelector('.navbar');
@@ -21,10 +27,6 @@ function scrollFunction() {
 
 };
 
-//Preloader
-window.addEventListener("load", () =>
-    document.querySelector(".preloader").classList.add("hidePreloader")
-);
 
 
 
