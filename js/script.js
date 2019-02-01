@@ -13,9 +13,12 @@ function scrollFunction() {
     if (`${(pageYOffset / max) * 100}` > 5) {
 
         navBar.classList.add('navbar-change');
+        navBar.style.position = "fixed";
+        
     } else if (`${(pageYOffset / max) * 100}` < 5) {
         // let navBar = document.querySelector('.navbar');
         navBar.classList.remove("navbar-change");
+        navBar.style.position = "static";
     };
 
 };
