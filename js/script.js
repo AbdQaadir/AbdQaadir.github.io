@@ -1,90 +1,88 @@
-//Preloader
-window.addEventListener("load", () =>
-    document.querySelector(".preloader").classList.add("hidePreloader")
-);
+AOS.init({
+  // Global settings:
+  disable: 'mobile phone tablet', // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+  initClassName: 'aos-init', // class applied after initialization
+  animatedClassName: 'aos-animate', // class applied on animation
+  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+  debounceDelay: 100, // the delay on debounce used while resizing window (advanced)
+  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+  
+
+  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  offset: 80, // offset (in px) from the original trigger point
+  delay: 50, // values from 0 to 3000, with step 50ms
+  duration: 2000, // values from 0 to 3000, with step 50ms
+  easing: 'ease', // default easing for AOS animations
+  once: false, // whether animation should happen only once - while scrolling down
+  mirror: true, // whether elements should animate out while scrolling past them
+  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+});
 
 
-//SCROLL EFFECT
-// let bar = document.querySelector("#progress");
-let navBar = document.querySelector('.navbar');
-let navLink = document.querySelectorAll('.nav-link');
-window.addEventListener("scroll", scrollFunction)
+//Typewriter Effect
+new TypeIt('#typewriter', {
+  strings: ['Hello! I\'m Lateef Qaadir Olayinka.',
+             'I\'m a Front-End Developer based in Oyo state, Nigeria.'],
+  speed: 80,
+  
+  waitUntilVisible: true,
+  cursor: false,
+  lifeLike: true,
+  loop: false,
+}).pause(1000)
+.go();
 
-
-function scrollFunction() {
-    let max = document.body.scrollHeight - innerHeight;
-    let navBar = document.querySelector('.navbar');
-    // bar.style.width = `${(pageYOffset / max) * 100}%`;
-
-    if (`${(pageYOffset / max) * 100}` > 5) {
-
-        navBar.classList.add('navbar-change');
-        
-    } else if (`${(pageYOffset / max) * 100}` < 5) {
-        // let navBar = document.querySelector('.navbar');
-        navBar.classList.remove("navbar-change");
-    };
-
-};
-
+new TypeIt('#phoneNumber', {
+  strings: "+234 9035 394 858",
+  waitUntilVisible: true,
+  cursor: true,
+  lifeLike: true,
+  speed: 100,
+}).go();
 
 
 
-// MAIN TEXT DISPLAY
-var TxtType = function (el, toRotate, period) {
-    this.toRotate = toRotate;
-    this.el = el;
-    this.loopNum = 0;
-    this.period = parseInt(period, 10) || 2000;
-    this.txt = '';
-    this.tick();
-    this.isDeleting = false;
-};
+// Carousel
+var $myCarousel = $('#myCarousel');
 
-TxtType.prototype.tick = function () {
-    var i = this.loopNum % this.toRotate.length;
-    var fullTxt = this.toRotate[i];
+// Initialize carousel
+$myCarousel.carousel();
 
-    if (this.isDeleting) {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
-    } else {
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
-    }
 
-    this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+function doAnimations(elems) {
+  var animEndEv = 'webkitAnimationEnd animationend';
 
-    var that = this;
-    var delta = 200 - Math.random() * 100;
+  elems.each(function () {
+    var $this = $(this),
+        $animationType = $this.data('animation');
 
-    if (this.isDeleting) { delta /= 2; }
+    // Add animate.css classes to
+    // the elements to be animated
+    // Remove animate.css classes
+    // once the animation event has ended
+    $this.addClass($animationType).one(animEndEv, function () {
+      $this.removeClass($animationType);
+    });
+  });
+}
 
-    if (!this.isDeleting && this.txt === fullTxt) {
-        delta = this.period;
-        this.isDeleting = true;
-    } else if (this.isDeleting && this.txt === '') {
-        this.isDeleting = false;
-        this.loopNum++;
-        delta = 500;
-    }
+// Select the elements to be animated
+// in the first slide on page load
+var $firstAnimatingElems = $myCarousel.find('.carousel-item:first')
+  .find('[data-animation ^= "animated"]');
 
-    setTimeout(function () {
-        that.tick();
-    }, delta);
-};
+// Apply the animation using the doAnimations()function
+doAnimations($firstAnimatingElems);
 
-window.onload = function () {
-    var elements = document.getElementsByClassName('typewrite');
-    for (var i = 0; i < elements.length; i++) {
-        var toRotate = elements[i].getAttribute('data-type');
-        var period = elements[i].getAttribute('data-period');
-        if (toRotate) {
-            new TxtType(elements[i], JSON.parse(toRotate), period);
-        }
-    }
-    // INJECT CSS
-    var css = document.createElement("style");
-    css.type = "text/css";
-    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff; color: black}";
-    document.body.appendChild(css);
-};
-//END OF MAIN TEXT DISPLAY
+// Attach the doAnimations() function to the
+// carousel's slide.bs.carousel event
+$myCarousel.on('slide.bs.carousel', function (e) {
+  // Select the elements to be animated inside the active slide
+  var $animatingElems = $(e.relatedTarget)
+    .find("[data-animation ^= 'animated']");
+  doAnimations($animatingElems);
+});
+

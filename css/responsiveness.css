@@ -1,91 +1,167 @@
-@media only screen and (min-width: 425px) and (max-width: 768px) {
-  .navbar{
-    background: #fff !important;
-	color: black;
-  box-shadow: 0 1px 30px rgba(0,0,0,.1);
+@media screen and (max-width: 320px) {
+  #typewriter{
+    font-size: 1.4rem;   
   }
-  .wrap {
-    font-size: 1.2rem;
-    line-height: 1.4 !important;
-    max-width: 70vw !important;
-  }
-  .main-text {
-    top: 1vh !important;
-  }
-  .btn {
-    font-size: 0.8rem;
-  }
-  .maincall {
-    font-size: 0.8rem;
-    padding-left: 5px !important;
-  }
-}
-@media only screen and (min-width: 375px) and (max-width: 425px) {
-	 .navbar{
-    background: #fff !important;
-	color: black;
-  box-shadow: 0 1px 30px rgba(0,0,0,.1);
-  }
-  .wrap {
-    font-size: 1.1rem;
-    line-height: 0.8 !important;
-  }
-  .about-col {
-    margin-left: 3vw;
-    margin-right: 10vw;
-  }
-  .contact-row p {
-    font-size: 0.9rem;
-    margin-left: 4vw;
-  }
-  .social-icons a i {
-    font-size: 2rem;
-  }
-  .copyright p {
-    font-size: 0.7rem;
-  }
-}
-@media only screen and (min-width: 290px) and (max-width: 360px) {
-	 .navbar{
-    background: #fff !important;
-	color: black;
-  box-shadow: 0 1px 30px rgba(0,0,0,.1);
-  }
-	.navbar-brand{
-		font-size: 1.1rem;
-		margin-right: 0 !important;
-	}
-  html {
-    padding: 0 !important;
-  }
-  .wrap {
-    font-size: 0.8rem;
-    line-height: 1 !important;
-  }
-  .main-text {
-    top: 1vh !important;
-  }
-  .btn {
-    font-size: 0.6rem;
-  }
-  .maincall {
-    font-size: 0.6rem;
-    padding-left: 5px !important;
-  }
-  .about-col {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+  .type-container {
+    align-self: center !important;
+    padding: 0;
+    margin: 0;
   }
 
-  .contact-row p {
-    font-size: 0.75rem;
-    margin-left: 3vw;
+
+  /*  */
+  
+  p.work-page-title{
+    font-size: .8rem;
+    margin: 2vh 2vw;
   }
-  .social-icons a i {
-    font-size: 1.5rem;
+  /*  */
+  #work{
+    padding: 10px;
   }
-  .copyright p {
-    font-size: 0.65rem;
-    padding: 5px !important;
+  .work-title h6{
+    font-size: 1.3rem;
+    padding: 0;
   }
+  .dotted-line{
+    font-size: 2rem;
+    margin-top: -10px;
+  }
+  /* testimonial */
+  #testimony{
+    padding: 15px;
+  }
+  h2{
+    font-size: 1.6rem;
+    padding: 0;
+    margin: 2.5vh 0;
+  }
+  .fa-quote-left{
+    font-size: 2rem;
+  }
+  .carousel .overview{
+    font-size: .9rem;
+  }
+  .carousel .overview a{
+    display: block;
+  }
+  /* contact */
+  #contact-us{
+    padding: 15px;
+  }
+  .avatar{
+    margin: 3vh 0;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 375px) {
+  #typewriter{
+    font-size: 1.5rem;   
+  }
+  .type-container {
+    align-self: center !important;
+    padding: 0;
+    margin: 0;
+  }
+
+  p.work-page-title{
+    font-size: 1rem;
+    margin: 2vh 2vw;
+  }
+  /*  */
+
+  #work{
+    padding: 10px;
+  }
+  .work-title h6{
+    font-size: 1.4rem;
+    padding: 0;
+  }
+  .dotted-line{
+    font-size: 2rem;
+    margin-top: -10px;
+  }
+   /* testimonial */
+   #testimony{
+    padding: 15px;
+  }
+  h2{
+    font-size: 1.6rem;
+    padding: 0;
+    margin: 2.5vh 0;
+  }
+  .fa-quote-left{
+    font-size: 2rem;
+  }
+  .carousel .overview{
+    font-size: 1rem;
+  }
+  .carousel .overview a{
+    display: block;
+  }
+    /* contact */
+    #contact-us{
+      padding: 15px;
+    }
+    .avatar{
+      margin: 3vh 0;
+    }
+}
+@media only screen and (min-width: 376px) and (max-width: 425px) {
+  #typewriter{
+    font-size: 1.6rem;   
+  }
+  .type-container {
+    align-self: center !important;
+  }
+
+  p.work-page-title{
+    font-size: 1rem;
+    margin: 2vh 2vw;
+  }
+   /* testimonial */
+  h2{
+    font-size: 1.9rem;
+    padding: 0;
+    margin: 2.5vh 0;
+  }
+  .fa-quote-left{
+    font-size: 2rem;
+  }
+/* contact */
+#contact-us{
+  padding: 15px;
+}
+.avatar{
+  margin: 3vh 0;
+}
+}
+@media only screen and (min-width: 377px) and (max-width: 768px) {
+  #typewriter{
+    font-size: 1.9rem;   
+  }
+  p.work-page-title{
+    font-size: 1.3rem;
+    margin: 4vh 2vw;
+  }
+
+/*  */
+#work{
+  padding: 10px;
+}
+.work-title h6{
+  font-size: 1.4rem;
+  padding: 0;
+}
+.dotted-line{
+  font-size: 2rem;
+  margin-top: -10px;
+}
+
+ /* contact */
+ #contact-us{
+  padding: 15px;
+}
+.avatar{
+  margin: 3vh 0;
+}
 }

@@ -6,20 +6,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/animate.css">
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="css/Portfolio.css">
-		<link rel="stylesheet" href="css/hover.css">
 		<link rel="stylesheet" href="css/responsiveness.css">
-		<link rel="icon" type="image/png"     href="assets/favicon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+		<link rel="icon" type="image/png"     href="./assets/avatar1.png">
 	</head>
-	<body>
-		<!-- preloader -->
-		<div class="preloader d-flex justify-content-center align-items-center">
-			<img src="/assets/preloader.gif" alt="preloader">
-		</div>
-		<!-- end preloader -->
-				
-				<nav class="navbar navbar-expand-md  navbar-light fixed-top">  
+	<body>				
+		<!-- <nav class="navbar navbar-expand-md  navbar-light fixed-top">  
 					<a href="#" class="navbar-brand hvr-bounce-out py-2 px-4 mx-5" href="#">ABD_QAADIR</a>
 				 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">  
 					<span class="fas fa-list-ul"></span>
@@ -42,179 +38,211 @@
 					</li> 
 				 </ul> 
 				 </div>
-			</nav>
+			</nav> -->
 
 
-	
-		<div class="container-fluid main-header" >
+		<section id="page" class="main-header animated fadeIn slower">
 			<div class="overlay"></div>
-			<div class="row">
-				<div class="col-md-12 main-text">
-					<p>
-						<a class="typewrite" data-period="2000" data-type='[ "Hello! Welcome to my Portfolio.", "I&#39;m Lateef Qaadir Olayinka.", "I am Creative.", "I am a Front-end Developer.", "I Love Design.", "I Love to Develop."]'>
-							<span class="wrap"></span>
-						</a>
-					</p>
-					<div class="float-left">
-						<a href="#about"><button href="about" class="main-btn btn py-2 px-3 hvr-icon-down">Get started <i class="fas fa-arrow-down hvr-icon"></i></button></a>
-					</div>
-					<div class="float-right py-5 px-5  mx-5">
-						<p class="main-call">CALL: +234 9035394858</p> 
-						<p class="main-call">For any inquiry or questions.</p> 
-					</div>
-					
-					
-					
-				</div>
+			<div class="d-flex align-self-end type-container container" >				
+				<h1 id="typewriter"></h1>	
 			</div>
-		</div>
+		</section>
 
 		
-		<!--about me  -->
-		<div class="container about" id="about">
-				<div class="clear"></div>
-				<div class="clear"></div>
-			<div class="row justify-content-center align-items-center">				
-
-				<div class="about-col order-3 col-lg-4 col-md-10 col-sm-10 text-center py-7">
-					<img class="avatar-image" src="assets/avatar1.png" alt="avatar-image">
+		<!--work  -->
+		<section id='work'>
+			<div class="container work-page ">
+				<div  data-aos="slide-down" class="section-icon animated bounce slower infinite" >
+					<!-- <i class="fas fa-tasks"></i> -->
+					<i class="fas fa-project-diagram"></i>
 				</div>
-
-				<div class="about-col order-1 col-lg-4 col-md-10 col-sm-10">
-					<!-- section title -->
-					<div class="section-title">
-						<h5>Short Bio</h5>
-					</div>			
-					<!-- end of section title -->
-					<p>Hello! I&#39;m Lateef Quadri Olayinka.</p>
-					<p>I&#39;m a Front-end developer. A passionate coder and a fantastic troubleshooter.</p> 
-					<p>I&#39;m passionate about developing and designing responsive websites.</p>
-					<p>I write technical articles on my blog.</p>
-				    <a href="/assets/My CV.pdf" download><button class="btn btn-outline-info hvr-icon-down">Download Resume <i class="fas fa-download hvr-icon"></i> </button></a>
-				</div>
-
-				<div class="about-col order-2 col-lg-4 col-md-10 col-sm-10">
-					<div class="section-title">
-						<h5>Skills</h5>
-					</div>
-					<ul>
-						<li>Html5 <span><i class="fab fa-html5"></i></span> </li>
-						<li>CSS3 <span><i class="fab fa-css3-alt"></i></span> </li>
-						<li>bootstrap4 <span><img src="/assets/bootstrap-logo.jpg" alt="bootstrap-logo"  width="20" height="20"></span> </li>
-						<li>jquery <span><img src="/assets/jquery-logo.png" alt="jquery-logo" width="20" height="20"></span> </li>
-						<li>Javascript <span><i class="fab fa-js"></i></span> </li>
-						<li>React <span><i class="fab fa-react"></i></span> </li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<!--end of about me  -->
-
-		<div class="clear"></div>
-		
-		<!--Services-->
-		<div id="services" class="container">
-				<div class="clear">	</div>
-				<!-- section title -->
-				<div class="section-title">
-					<h5>Services</h5>
-				</div>
-				<!-- end of section title -->
-			<div class="row justify-content-center">
-				<div class="col-md-9 col-lg-5 col-sm-10 services ">
-					<i class="fas fa-laptop"></i>
-					<h3> WEBSITE DESIGN</h3>
-					<p>I design websites that are responsive on all devices including mobile phones and tablets affordable price with time respect.</p>
-				</div>
-
-				<div class="col-md-9 col-lg-5 col-sm-10 services ">
-						<i class="fas fa-desktop"></i> 
-						<h3>SOFTWARE DEVELOPMENT</h3>
-						<p>I help in developing software that solves humans' problems</p>
-				</div>
-
-			</div>
-		</div>
-		<!-- end of services -->
-		<div class="clear"></div>
-
-		<!--Projects-->
-		<div class="container" id="projects">
-			<div class="clear"></div>
-			<!-- section title -->
-			<div class="section-title">
-				<h5>Recent Projects</h5>
-			</div>
-			<!-- end of section title -->
-			<div class="row justify-content-center">
-				<div class=" project col-lg-4 col-md-8 col-sm-10">
-					<a href="https://codepen.io/Lateef9816/full/qLxKEw" target="_blank">
-						<img src="/assets/ss1.JPG" alt="project-image-1" class="image">
-						<div class="overlay-project">
-							<div class="overlay-project-text">Javascript Calculator</div>
-						</div>
-					</a>
-				</div>
-				<div class="project col-lg-4 col-md-8 col-sm-10">
-					<a href="https://codepen.io/Lateef9816/full/gZoqrg" target="_blank">
-						<img src="/assets/ss2.JPG" alt="project-image-2" class="image">
-						<div class="overlay-project">
-							<div class="overlay-project-text">Sending Message To One's self</div>
-						</div>
-					</a>
-				</div>
-				<div class="project col-lg-4 col-md-8 col-sm-10">
-					<a href="https://codepen.io/Lateef9816/full/ebybQK" target="_blank">
-						<img src="/assets/ss3.JPG" alt="project-image-3" class="image">
-						<div class="overlay-project">
-							<div class="overlay-project-text">Random Statement Generator</div>
-						</div>	
-						</a>
-				</div>
-
-			</div>
-		</div>
-		<!-- end of Projects -->
-		<!--  -->
-		<div class="clear">	</div>		
-
-		<div class="container-fluid" id="contact">
-			<div class="clear">	</div>
-			<!-- section title -->
-			<div class="section-title">
-				<h5>Contact me</h5>
-			</div>
-			<!-- end of section title -->
-			<div class="row justify-content-center">
-					<div class="col-md-6 col-sm-7 contact-row">
-							<p><i class="fas fa-map-marker-alt" id= "location-icon"></i> Iseyin, Oyo State, Nigeria.</p>
-														
-							<p><i class="fab fa-skype" id= "location-icon"></i> Lateef Quadri Olayinka</p>
-
-							<p><i class="fas fa-envelope" id="location-icon"></i> Lateef9816@gmail.com</p>
-							
-							<p><i class="fas fa-phone" id="location-icon"></i> +234 903-539-4858</p>
-					</div>
-				</div>
-				
-			
-			</div>
-			
-			<div class="container copyright">
-					<div class="row justify-content-center">
-							<div class="col-md-6 text-center social-icons">
-							<a href="https://web.facebook.com/quadri.abdlateef" target="_blank"><i class="fab fa-facebook-f"></i></a>
-							<a href="https://twitter.com/Abd_Qaadir" target="_blank"><i class="fab fa-twitter"></i></a>
-							<a href="mailto:Lateef9816@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-							<a href="https://github.com/AbdQaadir" target="_blank"><i class="fab fa-github"></i></a>
-						</div>
-					</div>
 				<div class="row">
-					<p>Designed and Developed with <i class="fas fa-heart"></i> by Lateef, Qaadir Olayinka.</p></div>
-			</div>	
-		<script src="js/script.js"></script>
+					<div class="col-md-12">
+						<h2 class="work-page-title">My projects</h2>
+					</div>
+				</div>
+				<div data-aos="slide-left">
+					<div class="row justify-content-center">
+						<div class="col-lg-10 col-md-10 col-sm-10 text-center">
+							<a href="https://planetidea.netlify.com" target="_blank" class="work-title"><h6 >Planet Idea Engineering<span class=" d-block dotted-line">...</span></h6>
+							</a>
+						</div>
+					</div>
+					<div class="row work-rep justify-content-center">
+							<div class="col-lg-6 col-md-8 col-sm-10">
+								<img class="work-image" src="./assets/planet-mockup.png" alt="Project image">
+							</div>
+					</div>
+					<div class="row work-details justify-content-center text-center">
+						<div class="col-lg-6 col-md-8 col-sm-10">
+							<p class="work-excerpt">I developed this website with front end development skills, mainly <strong>html,</strong> <strong>css,</strong> <strong>bootstrap,</strong> and <strong>jquery</strong> The website is divided into two main parts - The Registration part and the member's profile.. A key aspect of the design of the website was to make it seem as minimal as possible. It was particularly important to have the website completely accessible on all devices due to the younger audience.</p>
+						</div>
+					</div>
+				</div>
+			
+
+
+				<div data-aos="fade-right">
+					<div class="row justify-content-center work-list">
+						<div class="col-lg-10 col-md-10 col-sm-10 text-center">
+							<a href="https://abdqaadir-car-dealership.netlify.com" class="work-title" target="_blank"><h6>Adeyemi Car Dealership<span class=" d-block dotted-line">...</span></h6></a>
+						</div>
+					</div>
+					<div class="row work-rep justify-content-center">
+							<div class="col-lg-6 col-md-8 col-sm-10">
+								<img class="work-image" src="./assets/car-mockup.png" alt="Project image">
+							</div>
+					</div>
+					<div class="row work-details justify-content-center text-center">
+						<div class="col-lg-6 col-md-8 col-sm-10">
+							<p class="work-excerpt">I developed this website with front end development skills, mainly <strong>html,</strong> <strong>css,</strong> <strong>bootstrap,</strong> and <strong>javascript</strong> The website features cars of different make, that you can order for online. This project is just a template done by me from scratch. It was particularly important to have the website completely accessible on all devices due to the younger audience.</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<section id="testimony">
+			<div class="container">
+				<div  data-aos="slide-down" class="section-icon animated bounce slower infinite" >
+						<i class="fas fa-thumbs-up"></i>
+				</div>
+				<div class="row d-flex justify-content-center">
+						<div class="col-lg-8 col-md-10 col-sm-10 text-center justify-content-center ">
+							<h2>Testimonials</h2>
+							<i class="fas fa-quote-left"></i>
+							<br>
+							<br><br>
+							<div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="10000">
+								<!-- Carousel indicators -->
+								<ol class="carousel-indicators">
+									<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+									<li data-target="#myCarousel" data-slide-to="1"></li>
+									<li data-target="#myCarousel" data-slide-to="2"></li>
+								</ol>   
+								<!-- Wrapper for carousel items -->
+								<div class="carousel-inner">		
+									<div class="item carousel-item active">
+										<div class="img-box " data-animation="animated bounceInLeft"><img src="./assets/najam.jpg" alt=""></div>
+										<p class="testimonial" data-animation="animated bounceInRight">Firstly, thanks for the great work. Finding new developer and trusting new person is a difficult job. But trust me, AbdulQaadir is amazing in his skills. Highly recommended.</p>
+										<div class="overview-rating" data-animation="animated fadeInUp">
+											<p class="overview"><b>Najam Ul Saqib</b>UI & UX Designer | <a href="#">Najam Tech Org.</a></p>
+											<div class="star-rating" data-animation="animated fadeInUp">
+												<ul class="list-inline">
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star-half-alt"></i></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="item carousel-item">
+										<div class="img-box" data-animation="animated bounceInRight"><img src="./assets/najam-2.jpg" alt=""></div>
+										<p class="testimonial" data-animation="animated bounceInLeft">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum idac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p>
+										<div class="overview-rating" data-animation="animated fadeInUp">
+											<p class="overview"><b>Najam Ul Saqib</b>UI & UX Designer | <a href="#">Najam Tech Tech.</a></p>
+											<div class="star-rating" data-animation="animated fadeInUp">
+												<ul class="list-inline">
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="item carousel-item">
+										<div class="img-box" data-animation="animated bounceInLeft"><img src="./assets/najam-3.jpg" alt=""></div>
+										<p class="testimonial" data-animation="animated bounceInRight">Vestibulum quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi suscipit tincidunt. Utmtc tempus dictum risus. Pellentesque viverra sagittis quam at mattis. Suspendisse potenti. Aliquam sit amet gravida nibh, facilisis gravida odio. Phasellus auctor velit.</p>
+										<div class="overview-rating" data-animation="animated fadeInUp">
+											<p class="overview"><b>Najam Ul Saqib</b>UI & UX Designer | <a href="#">Najam Tech Tech.</a></p>
+											<div class="star-rating" >
+												<ul class="list-inline">
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star"></i></li>
+													<li class="list-inline-item"><i class="fa fa-star-half-alt"></i></li>
+												</ul>
+											</div>
+										</div>	
+									</div>		
+								</div>
+							</div>
+							<!-- Carousel controls -->
+							<a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
+								<i class="fa fa-angle-left"></i>
+							</a>
+							<a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next">
+								<i class="fa fa-angle-right"></i>
+							</a>
+						</div>
+				</div>
+			</div>
+			
+		</section>
+
+		<!-- contact -->
+		<section id='contact-us'>
+				<div class="container  site-page-work" id="contact">
+					<div  data-aos="slide-down" class="section-icon animated bounce slower infinite" >
+						<i class="fab fa-connectdevelop"></i>
+					</div>
+					<div class="row">
+							<div class="col-md-12">
+								<h2 class="work-page-title">contact me</h2>
+							</div>
+						</div>
+					<div class="row">
+						<div class="col-md-8 col-lg-8 col-sm-12">
+							<h6 class="contact-page-title py-5">I'm always open for projects. You can find some of my other projects on <a href="https://github.com/AbdQaadir" target="_blank">github</a>, you can as well reach out to me on <a href="https://web.facebook.com/quadri.abdlateef" target="_blank">facebook</a> and on <a href="https://twitter.com/Abd_Qaadir" target="_blank">twitter.</a> <br> Check out my gigs on <a href=" https://www.fiverr.com/abdqaadir" target="_blank">fiverr.</a>  </h6>
+						</div>
+					</div>
+					<div class="row py-5 d-flex justify-content-around">
+						<div class="col-lg-8 col-md-10 col-sm-10 email-me py-5 d-flex justify-content-between">
+							<form name="contact" method="POST" action="https://formspree.io/your@email.com" data-netlify="true" >
+								<div class="form-group ">
+									<label for="name">Your Name: </label>
+									<input type="text" name="name" id="name"  placeholder="Your full name" required/>  
+								</div>
+								<div class="form-group ">
+									<label for="email">Your Email:</label>
+									<input type="email" name="email" placeholder="you@example.com" />
+								</div>
+								<div class="form-group ">
+									<label for="tel">Your Phone Number:</label>
+									<input type="tel" name="tel" placeholder="+234-000-000-00" />
+								</div>
+								<div class="form-group">
+										<label for="message">Message:</label>
+										<textarea name="message" id="message"></textarea>
+								</div>
+								<div class="form-group">
+									<button type="submit">Send Message</button>
+								</div>
+							</form>
+						</div>
+						<div class="col-lg-2 col-md-6 col-sm-10 align-self-center">
+								<img src="./assets/avatar1.png" alt="avatar" class="avatar">	
+						</div>
+					</div>
+					
+					
+				</div>
+			</section>
+			
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+			<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+			<!-- <script>
+				AOS.init();
+			  </script> -->
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/typeit@6.0.2/dist/typeit.min.js"></script>	
+			<script src="js/script.js"></script>
 	</body>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </html>
