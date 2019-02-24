@@ -22,8 +22,8 @@ html {
 body{
 	background:#FFF;
 	/* font-family: 'Karla', sans-serif; */
-	font-family: 'Poppins', sans-serif;
-
+/* 	font-family: 'Poppins', sans-serif; */
+	font-family: 'Nunito', sans-serif;
 	overflow-x:	hidden;
 	font-size: 15px;
 	color: var(--main-black);
