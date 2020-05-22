@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Vowelic Game</title>
+</head>
+<body>
+    <div class="container-fluid py-5" id="main">
+        <div class="row d-flex justify-content-center align-items-center main">
+            <div class="col-8">
+                <h1>Vowelic Game</h1>
+                <p>Welcome to my basic JavaScript game, I hope you enjoy it.</p>
+                <p>This game will test you on how fast and accurate you can count vowels in an English Word.</p>
+                <p>You have 60secs max to play this game</p>
+                <p>The game ends on the submission of wrong answer. Good Luck!</p>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center align-items-center start">
+            <div class="col-2 text-center">
+                <input type="submit" value="Start Game" id="start-btn">
+            </div>
+        </div>
+        <div class="row justify-content-center" style="display: none !important;" id="game">
+            <div class="col-8 text-center" id="game-on">
+                <p>Points: <span id="points">0</span></p>
+                <p>Time Left: <span id="time"></span></p>
+                <h3 id="word">Explanatory</h3>
+                <input type="text" id="answer" autofocus>
+                <br>
+                
+                <input type="submit" class="btn btn" value="Next" id="submit-btn">
+            </div>            
+        </div>
+        <div class="row justify-content-center py-5" id="game-over">
+            <div class="col-8 text-center my-3">
+                <h1 style="font-weight: bold;">GAME OVER</h1>
+                <p>Your Points: <span id="totalPoints">0</span></p>
+                <input type="submit" class="btn" style="background-color: rgb(90, 90, 90); color: #f9f9f9;" value="Restart Game" id="restart-btn">
+            </div>
+        </div>
+    </div>
+
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/script.js" ></script>
+<script type="module" src="/js/words.js" ></script>
+</body>
+</html>

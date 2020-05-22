@@ -1,0 +1,133 @@
+const game = document.querySelector('#game');
+const test = document.querySelector('#word');
+const response = document.querySelector('#answer');
+const submitBtn = document.querySelector('#submit-btn');
+const restartBtn = document.querySelector('#restart-btn');
+const startBtn = document.querySelector('#start-btn');
+const time = document.querySelector('#time');
+const gameOver = document.querySelector('#game-over')
+const points = document.querySelector('#points');
+game.style.display = 'none';
+let gameActive = true;
+gameOver.style.display = 'none';
+let score = 0;
+let timeRemaining = 60;
+time.innerHTML = timeRemaining;
+let currentAnswer;
+let words;
+
+
+let timeFunc = () => {
+    if(timeRemaining > 0){
+        if(timeRemaining < 30 && timeRemaining > 15) time.style.color = 'yellow';
+        else if(timeRemaining < 15) time.style.color = 'red';
+        timeRemaining -= 1;
+        time.innerHTML = timeRemaining;
+        checkStatus();
+    }else{
+        gameActive = false
+        checkStatus();
+        gameOff();
+    }
+}
+
+let displayQuestion = (arr) => {
+    test.innerHTML = '';
+    let questionWord, answer;
+    randomIndex = Math.floor(Math.random() * arr.length);
+    questionWord = arr[randomIndex];
+    test.innerHTML = questionWord;
+}
+
+let scorePoint = () => {
+    let counter = 0;
+    let vowels = ['a', 'e', 'i', 'o', 'u'];
+    let currentQuestion = Array.from(test.innerHTML.toLowerCase());
+    currentQuestion.forEach(letter => {
+        if(vowels.includes(letter)){
+            counter ++;
+        };
+    })
+    if(parseInt(response.value) === counter){
+        score += 5;
+        points.innerHTML = score;
+        response.value = '';
+        response.focus();
+    }
+    else{
+        gameOff();
+    }
+    
+}
+
+let gameOff = () => {
+    gameActive = false;
+    document.querySelector('#totalPoints').innerHTML = score;
+    response.value = '';
+    document.getElementById('game-on').style.display = 'none';
+    game.classList.remove('active');
+    gameOver.classList.add('active');
+}
+
+
+let init = function() {
+    startBtn.style.display = 'none';
+    game.classList.add('active');
+    gameActive = true;
+    setInterval(timeFunc, 1000);
+}
+
+startBtn.addEventListener('click', (e) =>{
+    e.preventDefault()
+    init();
+    console.log(words)
+})
+
+restartBtn.addEventListener('click', (e) =>{
+    location.reload();
+})
+let progress = () =>{
+    scorePoint();
+    displayQuestion(words);
+}
+submitBtn.addEventListener('click', (e) => {
+    e.preventDefault()
+    progress();
+});
+
+document.addEventListener('keypress', (e) =>{
+    if(e.code === 'Enter'){
+        progress();
+    }
+});
+
+
+let resetGame = () => {
+    gameOver.style.display = 'block';
+    answer.innerHTML = "";
+    timeRemaining = 60;
+}
+let checkStatus = () => {
+    if(gameActive){
+    gameOver.style.display = 'none';
+    }else{
+        resetGame()
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+words = `wonder thousand ceramicist cercarians cerebellar cerebellum exodontist exoenzymes exogenisms exonerated cerebrally cervicitis cessations chafferers chaffering chagrining chagrinned ago ran check game shape equate hot miss brought heat snow hodgepodge hodoscopes hokeypokey hokinesses hokypokies holidayers holidaying holinesses hollowares hollowness tire bring yes distant fill east paint language among grand ball yet wave drop heart am present heavy dance engine position wide sail material size vary settle speak weight general ice matter circle pair include divide syllable felt perhaps pick sudden count square reason length represent art subject certifying certiorari certitudes ceruminous region energy hunt probable bed brother egg cetologies hoarsening hobblebush hobbyhorse hobgoblins hobnailing hobnobbers hobnobbing hollowware hollyhocks cetologist chabazites chaetopods ride cell believe fraction forest sit race window store summer cerebrated cerebrates cerecloths ceremonial ceremonies certainest certifiers cerussites cervelases ederating federation federative federators feebleness feedgrains feedstocks feedstuffs feistiness cervicites train sleep prove lone leg exercise wall mount wish sky board joy winter sat written wild instrument glass grass cow job edge sign visit past soft fun bright noon locate character insect caught period indicate existences exobiology feculences fecundated fecundates federacies federalese federalism federalist federalize fexocytosed exocytoses exocytosis exocytotic exodontias`;
+
+words = words.split(" ");
+console.log(words);
