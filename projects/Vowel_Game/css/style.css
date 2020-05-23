@@ -3,15 +3,13 @@ body{
     font-family: 'Karla', sans-serif;
     color: #fff;
 }
-#main{
-    padding-top: 20px;
-}
-.main h1{
+#main h1{
     font-size: 3rem;
     font-weight: bold;
 }
-.main p{
-    font-size: 1.1rem;
+#main p{
+    font-size: 1.3rem;
+    margin: 10px;
 }
 
 #start-btn{
@@ -34,25 +32,31 @@ body{
 .active{
     display: flex !important;
 }
-#game-on{
+.inactive{
+    display: none !important;
+}
+#main{
     /* display: none !important; */
     background: #01253d75;
-    margin: 20px auto;
+    /* margin: 20px auto; */
+    margin-top: 10%;
     padding: 40px 20px;
     border-radius: 30px;
     color: #ffffff;
 }
-
+/* #game{
+    
+} */
 #game p:first-child{
     position: absolute;
-    top: 20px;
-    left: 50px;
+    top: 10px;
+    left: 30px;
     font-size: 2rem;
 }
 #game p:nth-child(2){
     position: absolute;
-    top: 20px;
-    right: 50px;
+    top: 10px;
+    right: 30px;
     font-size: 2rem;
 }
 #points, #time{
@@ -65,7 +69,7 @@ body{
     font-size: 4rem;
     color: rgb(46, 243, 200);
     font-weight: bold;
-    margin: 30px 0;
+    margin-top: 50px;
 }
 
 #answer{
@@ -91,4 +95,19 @@ body{
     outline: none;
     border-radius: 20px;
     background: #f9f9f91c;
+}
+
+
+p#status-msg{
+    top: 5px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: sandybrown;
+    --animate-delay: 3s;
+    --animate-duration: 2s;
+    
+}
+#addTime{
+    /* display: block;    */
+    --animate-duration: 3s;
 }

@@ -7,6 +7,14 @@ const startBtn = document.querySelector('#start-btn');
 const time = document.querySelector('#time');
 const gameOver = document.querySelector('#game-over')
 const points = document.querySelector('#points');
+const instruction = document.querySelector('.instruction');
+const addedTime = document.querySelector('#addTime');
+const statusMsg = document.querySelector('#status-msg')
+// AUDIOS
+const timeAddedAudio = document.querySelector('#timeAddedAudio');
+const gameEndAudio = document.querySelector('#gameEndAudio');
+
+// 
 game.style.display = 'none';
 let gameActive = true;
 gameOver.style.display = 'none';
@@ -17,8 +25,10 @@ let currentAnswer;
 let words;
 
 
+
 let timeFunc = () => {
     if(timeRemaining > 0){
+        if(timeRemaining > 30) time.style.color = '#fff';
         if(timeRemaining < 30 && timeRemaining > 15) time.style.color = 'yellow';
         else if(timeRemaining < 15) time.style.color = 'red';
         timeRemaining -= 1;
@@ -49,18 +59,42 @@ let scorePoint = () => {
         };
     })
     if(parseInt(response.value) === counter){
+        // if(addedTime.style.display === 'block') addedTime.style.display = 'none';
+        // timeAudio();
         score += 5;
         points.innerHTML = score;
         response.value = '';
         response.focus();
+        if(score === 100){
+            timeAudio();
+            timeRemaining +=10;
+            addedTime.innerHTML = '+10'
+        };
+        if(score === 130){
+            timeAudio();
+            timeRemaining +=8;
+            addedTime.innerHTML = '+8'
+        }
+        if(score === 170){
+            timeAudio();
+            timeRemaining +=6;
+            addedTime.innerHTML = '+6'
+        };
+        if(score === 230){
+            timeAudio();
+            timeRemaining +=3;
+            addedTime.innerHTML = '+3'
+        }
     }
     else{
         gameOff();
     }
-    
 }
+let timeAudio = () => timeAddedAudio.play();
+let endAudio = () => gameEndAudio.play();
 
 let gameOff = () => {
+    endAudio();
     gameActive = false;
     document.querySelector('#totalPoints').innerHTML = score;
     response.value = '';
@@ -78,6 +112,7 @@ let init = function() {
 }
 
 startBtn.addEventListener('click', (e) =>{
+    instruction.style.display = 'none';
     e.preventDefault()
     init();
     console.log(words)
@@ -114,6 +149,7 @@ let checkStatus = () => {
         resetGame()
     }
 }
+
 
 
 
