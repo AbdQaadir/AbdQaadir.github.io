@@ -10,6 +10,9 @@ const points = document.querySelector('#points');
 const instruction = document.querySelector('.instruction');
 const statusMsg = document.querySelector('#status-msg');
 const highScore = document.querySelector('.high-score');
+const mobileBtn = document.querySelectorAll('.mobileBtn');
+
+
 // AUDIOS
 const timeAddedAudio = document.querySelector('#timeAddedAudio');
 const gameEndAudio = document.querySelector('#gameEndAudio');
@@ -28,8 +31,7 @@ let score = 0;
 let timeRemaining = 60;
 time.innerHTML = timeRemaining;
 let currentAnswer;
-let words, encWords;
-
+let words, encWords, mobileAnswer;
 
 
 let timeFunc = () => {
@@ -68,6 +70,9 @@ let displayQuestion = (arr) => {
 
 
 let scorePoint = () => {
+    let responseValue
+    if(mobileAnswer) responseValue = mobileAnswer;
+    else {responseValue = response.value};
     let counter = 0;
     let vowels = ['a', 'e', 'i', 'o', 'u'];
     let currentQuestion = Array.from(test.innerHTML.toLowerCase());
@@ -76,52 +81,54 @@ let scorePoint = () => {
             counter ++;
         };
     })
-    if(parseInt(response.value) === counter){
-        // if(addedTime.style.display === 'block') addedTime.style.display = 'none';
-        // timeAudio();
+    if(parseInt(responseValue) === counter){
         score += 5;
         points.innerHTML = score;
         response.value = '';
         response.focus();
+
+        if(score === 60){
+            timeAudio();
+            timeRemaining +=8;
+            m8Play();
+        };
+        if(score === 80){
+            timeAudio();
+            timeRemaining +=10;
+            m10Play();
+        };
         if(score === 100){
             timeAudio();
-            // statusMsg.innerHTML = encWords[1]
             timeRemaining +=15;
             m10Play();
         };
         if(score === 130){
             timeAudio();
-            // statusMsg.innerHTML = encWords[0]
             timeRemaining +=12;
             m12Play();
         }
         if(score === 170){
             timeAudio();
-            // statusMsg.innerHTML = encWords[2]
             timeRemaining +=13;
             m13Play();
         };
         if(score === 230){
             timeAudio();
-            // statusMsg.innerHTML = encWords[3]
             timeRemaining +=12;
             m12Play();
         }
         if(score === 250){
             timeAudio();
-            // statusMsg.innerHTML = encWords[3]
             timeRemaining +=10;
             m10Play();
         }
         if(score === 280){
             timeAudio();
-            // statusMsg.innerHTML = encWords[3]
             timeRemaining +=8;
             m8Play();
         }
         if(score === 300){
             timeAudio();
-            // statusMsg.innerHTML = encWords[3]
             timeRemaining +=3;
             m3Play();
         }
@@ -187,6 +194,8 @@ startBtn.addEventListener('click', (e) =>{
     console.log(words)
 })
 
+
+
 restartBtn.addEventListener('click', (e) =>{
     location.reload();
 })
@@ -198,6 +207,16 @@ submitBtn.addEventListener('click', (e) => {
     e.preventDefault()
     progress();
 });
+
+mobileBtn.forEach(butn => {
+    butn.addEventListener('click', (e) => {
+        mobileAnswer =  e.target.value;
+        e.preventDefault()
+        progress();
+    }) 
+})
+
+
 
 document.addEventListener('keypress', (e) =>{
     if(e.code === 'Enter'){

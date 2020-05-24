@@ -1,4 +1,17 @@
 @media screen and (max-width: 320px) {
+  #submit-btn{
+    display: none !important;
+  }
+  .mobileBtn{
+    font-size: 1.8rem;
+    padding: 7px;
+    border-radius: 10px;
+    width: 50px;
+    margin: 5px 10px;
+}
+  .mobile{
+    display: block;
+  }
   #main{
     margin: 8% 30px;
     width: 80vw;
@@ -103,6 +116,19 @@ p#status-msg{
 }
 }
 @media only screen and (min-width: 321px) and (max-width: 375px) {
+  #submit-btn{
+    display: none !important;
+  }
+  .mobile{
+    display: block;
+  }
+  .mobileBtn{
+    font-size: 1.8rem;
+    padding: 5px;
+    border-radius: 10px;
+    width: 70px;
+    margin: 8px 15px;
+}
   #main{
     margin: 8% 30px;
     width: 80vw;
@@ -210,6 +236,19 @@ p#status-msg{
   }
 }
 @media only screen and (min-width: 376px) and (max-width: 425px) {
+  #submit-btn{
+    display: none !important;
+  }
+.mobile{
+  display: block;
+}
+.mobileBtn{
+  font-size: 1.8rem;
+  padding: 5px;
+  border-radius: 10px;
+  width: 70px;
+  margin: 10px 19px;
+}
   #main{
     width: 80vw;
     padding: 10px 10px;
@@ -305,13 +344,26 @@ background-color: none !important;
 font-size: 1.3rem;
 }
 }
-@media only screen and (min-width: 377px) and (max-width: 768px) {
+@media only screen and (min-width: 427px) and (max-width: 768px) {
+  #submit-btn{
+    display: none !important;
+  }
   #main{
     width: 80vw;
     padding: 20px 10px;
     border-radius: 30px;
     color: #ffffff;
     margin-top: 35px;
+  }
+  .mobile{
+    display: block;
+  }
+  .mobileBtn{
+    font-size: 2.2rem;
+    padding: 5px;
+    border-radius: 10px;
+    width: 70px;
+    margin: 14px 19px;
   }
   #main .row{
     padding: 10px;
@@ -383,5 +435,3 @@ font-size: 1.3rem;
       border-radius: 5px;
   }
 }
-
-
