@@ -1,7 +1,9 @@
 body{
     background: rgba(0, 90, 75, 0.856);
-    font-family: 'Karla', sans-serif;
+    /* font-family: 'Karla', sans-serif; */
+    /* font-family: 'Oxygen', sans-serif; */
     color: #fff;
+    font-family: 'Cairo', sans-serif;
 }
 #main h1{
     font-size: 3rem;
@@ -39,7 +41,7 @@ body{
     /* display: none !important; */
     background: #01253d75;
     /* margin: 20px auto; */
-    margin-top: 10%;
+    margin-top: 7%;
     padding: 40px 20px;
     border-radius: 30px;
     color: #ffffff;
@@ -52,12 +54,14 @@ body{
     top: 10px;
     left: 30px;
     font-size: 2rem;
+    color: rgb(0, 255, 242);
 }
 #game p:nth-child(2){
     position: absolute;
     top: 10px;
     right: 30px;
     font-size: 2rem;
+    color: aqua;
 }
 #points, #time{
     font-weight: 4rem;
@@ -94,7 +98,7 @@ body{
     padding: 8px 15px;
     outline: none;
     border-radius: 20px;
-    background: #f9f9f91c;
+    background: sandybrown;
 }
 
 
@@ -110,4 +114,13 @@ p#status-msg{
 #addTime{
     /* display: block;    */
     --animate-duration: 3s;
+}
+.foot-note{
+    font-size: 1.5rem;
+}
+.fab{
+    font-size: 2rem;
+    background: #fff;
+    padding: 5px;
+    border-radius: 5px;
 }

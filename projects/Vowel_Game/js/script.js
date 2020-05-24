@@ -8,11 +8,17 @@ const time = document.querySelector('#time');
 const gameOver = document.querySelector('#game-over')
 const points = document.querySelector('#points');
 const instruction = document.querySelector('.instruction');
-const addedTime = document.querySelector('#addTime');
-const statusMsg = document.querySelector('#status-msg')
+const statusMsg = document.querySelector('#status-msg');
+const highScore = document.querySelector('.high-score');
 // AUDIOS
 const timeAddedAudio = document.querySelector('#timeAddedAudio');
 const gameEndAudio = document.querySelector('#gameEndAudio');
+const m15 = document.querySelector('#m15');
+const m13 = document.querySelector('#m13');
+const m12 = document.querySelector('#m12');
+const m10 = document.querySelector('#m10');
+const m8 = document.querySelector('#m8');
+const m3 = document.querySelector('#m3');
 
 // 
 game.style.display = 'none';
@@ -22,7 +28,7 @@ let score = 0;
 let timeRemaining = 60;
 time.innerHTML = timeRemaining;
 let currentAnswer;
-let words;
+let words, encWords;
 
 
 
@@ -49,6 +55,18 @@ let displayQuestion = (arr) => {
     test.innerHTML = questionWord;
 }
 
+
+// let test2 = test();
+// setTimeout(test, 3000);
+
+// let test = (arg) => {
+//     addedTime.innerHTML = arg;
+//     return setInterval(() => {       
+//         addedTime.style.opacity -= 1;
+//     }, 1000)
+// }
+
+
 let scorePoint = () => {
     let counter = 0;
     let vowels = ['a', 'e', 'i', 'o', 'u'];
@@ -65,25 +83,59 @@ let scorePoint = () => {
         points.innerHTML = score;
         response.value = '';
         response.focus();
-        if(score === 100){
+        if(score === 10){
             timeAudio();
-            timeRemaining +=10;
-            addedTime.innerHTML = '+10'
+            // statusMsg.innerHTML = encWords[1]
+            timeRemaining +=15;
+            m10Play();
         };
         if(score === 130){
             timeAudio();
-            timeRemaining +=8;
-            addedTime.innerHTML = '+8'
+            // statusMsg.innerHTML = encWords[0]
+            timeRemaining +=12;
+            m12Play();
         }
         if(score === 170){
             timeAudio();
-            timeRemaining +=6;
-            addedTime.innerHTML = '+6'
+            // statusMsg.innerHTML = encWords[2]
+            timeRemaining +=13;
+            m13Play();
         };
         if(score === 230){
             timeAudio();
+            // statusMsg.innerHTML = encWords[3]
+            timeRemaining +=12;
+            m12Play();
+        }
+        if(score === 250){
+            timeAudio();
+            // statusMsg.innerHTML = encWords[3]
+            timeRemaining +=10;
+            m10Play();
+        }
+        if(score === 280){
+            timeAudio();
+            // statusMsg.innerHTML = encWords[3]
+            timeRemaining +=8;
+            m8Play();
+        }
+        if(score === 300){
+            timeAudio();
+            // statusMsg.innerHTML = encWords[3]
             timeRemaining +=3;
-            addedTime.innerHTML = '+3'
+            m3Play();
+        }
+        if(score === 350){
+            timeAudio();
+            // statusMsg.innerHTML = encWords[3]
+            timeRemaining +=10;
+            m10Play();
+        }
+        if(score === 450){
+            timeAudio();
+            // statusMsg.innerHTML = encWords[3]
+            timeRemaining +=15;
+            m15Play();
         }
     }
     else{
@@ -92,9 +144,25 @@ let scorePoint = () => {
 }
 let timeAudio = () => timeAddedAudio.play();
 let endAudio = () => gameEndAudio.play();
+let m15Play = () => m15.play();
+let m13Play = () => m13.play();
+let m12Play = () => m12.play();
+let m10Play = () => m10.play();
+let m8Play = () => m8.play();
+let m3Play = () => m3.play();
 
+let highScoreHandler = () => {
+    let prevHighScore = localStorage.getItem("High Score");
+    highScore.innerHTML = prevHighScore;
+    if(!prevHighScore)  localStorage.setItem("High Score", score);
+    else if(score > prevHighScore){
+        localStorage.setItem("High Score", score);
+        highScore.innerHTML = score;
+    }
+}
 let gameOff = () => {
     endAudio();
+    highScoreHandler();
     gameActive = false;
     document.querySelector('#totalPoints').innerHTML = score;
     response.value = '';
@@ -105,6 +173,7 @@ let gameOff = () => {
 
 
 let init = function() {
+    highScoreHandler();
     startBtn.style.display = 'none';
     game.classList.add('active');
     gameActive = true;
@@ -162,6 +231,7 @@ let checkStatus = () => {
 
 
 
+encWords = ['Keep going', 'You are doing well!', 'You can do it!', 'You are a pro!']
 
 words = `wonder thousand ceramicist cercarians cerebellar cerebellum exodontist exoenzymes exogenisms exonerated cerebrally cervicitis cessations chafferers chaffering chagrining chagrinned ago ran check game shape equate hot miss brought heat snow hodgepodge hodoscopes hokeypokey hokinesses hokypokies holidayers holidaying holinesses hollowares hollowness tire bring yes distant fill east paint language among grand ball yet wave drop heart am present heavy dance engine position wide sail material size vary settle speak weight general ice matter circle pair include divide syllable felt perhaps pick sudden count square reason length represent art subject certifying certiorari certitudes ceruminous region energy hunt probable bed brother egg cetologies hoarsening hobblebush hobbyhorse hobgoblins hobnailing hobnobbers hobnobbing hollowware hollyhocks cetologist chabazites chaetopods ride cell believe fraction forest sit race window store summer cerebrated cerebrates cerecloths ceremonial ceremonies certainest certifiers cerussites cervelases ederating federation federative federators feebleness feedgrains feedstocks feedstuffs feistiness cervicites train sleep prove lone leg exercise wall mount wish sky board joy winter sat written wild instrument glass grass cow job edge sign visit past soft fun bright noon locate character insect caught period indicate existences exobiology feculences fecundated fecundates federacies federalese federalism federalist federalize fexocytosed exocytoses exocytosis exocytotic exodontias`;
 
