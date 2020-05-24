@@ -136,6 +136,9 @@ p#status-msg{
     background-color: sandybrown;
     color: seashell;
 }
+.mobileBtn{
+
+}
 .mobile{
     display: none;
 }
