@@ -83,7 +83,7 @@ let scorePoint = () => {
         points.innerHTML = score;
         response.value = '';
         response.focus();
-        if(score === 10){
+        if(score === 100){
             timeAudio();
             // statusMsg.innerHTML = encWords[1]
             timeRemaining +=15;

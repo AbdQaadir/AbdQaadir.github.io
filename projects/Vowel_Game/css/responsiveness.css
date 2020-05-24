@@ -91,6 +91,16 @@ p#status-msg{
 #restart-btn{
   font-size: 1.3rem;
 }
+.foot-note{
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 1.2px;
+}
+.fab{
+    font-size: .8rem;
+    padding: 5px;
+    border-radius: 5px;
+}
 }
 @media only screen and (min-width: 321px) and (max-width: 375px) {
   #main{
@@ -187,6 +197,16 @@ p#status-msg{
   }
   #restart-btn{
   font-size: 1.3rem;
+  }
+  .foot-note{
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 1.2px;
+  }
+  .fab{
+      font-size: 1rem;
+      padding: 5px;
+      border-radius: 5px;
   }
 }
 @media only screen and (min-width: 376px) and (max-width: 425px) {
@@ -353,6 +373,14 @@ font-size: 1.3rem;
       --animate-delay: 3s;
       --animate-duration: 2s;
       
+  }
+  .foot-note{
+    font-size: 1.3rem;
+  }
+  .fab{
+      font-size: 1.1rem;
+      padding: 5px;
+      border-radius: 5px;
   }
 }
 
