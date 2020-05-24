@@ -111,6 +111,9 @@ p#status-msg{
     --animate-duration: 2s;
     
 }
+.bounceIn{
+    --animate-duration: 5s;
+}
 #addTime{
     /* display: block;    */
     --animate-duration: 3s;

@@ -820,8 +820,8 @@
 }
 
 .bounceIn {
-  -webkit-animation-duration: 0.75s;
-  animation-duration: 0.75s;
+  -webkit-animation-duration: 7s;
+  animation-duration: 7s;
   -webkit-animation-name: bounceIn;
   animation-name: bounceIn;
 }

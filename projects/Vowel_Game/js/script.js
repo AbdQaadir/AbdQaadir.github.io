@@ -11,10 +11,11 @@ const instruction = document.querySelector('.instruction');
 const statusMsg = document.querySelector('#status-msg');
 const highScore = document.querySelector('.high-score');
 const mobileBtn = document.querySelectorAll('.mobileBtn');
+const level = document.querySelector('#level');
 
 
 // AUDIOS
-const timeAddedAudio = document.querySelector('#timeAddedAudio');
+// const timeAddedAudio = document.querySelector('#timeAddedAudio');
 const gameEndAudio = document.querySelector('#gameEndAudio');
 const m15 = document.querySelector('#m15');
 const m13 = document.querySelector('#m13');
@@ -68,6 +69,14 @@ let displayQuestion = (arr) => {
 //     }, 1000)
 // }
 
+// let timeAudio = () => timeAddedAudio.play();
+let endAudio = () => gameEndAudio.play();
+let m15Play = () => m15.play();
+let m13Play = () => m13.play();
+let m12Play = () => m12.play();
+let m10Play = () => m10.play();
+let m8Play = () => m8.play();
+let m3Play = () => m3.play();
 
 let scorePoint = () => {
     let responseValue
@@ -88,58 +97,52 @@ let scorePoint = () => {
         response.focus();
 
         if(score === 60){
-            timeAudio();
+            statusMsg.classList.remove('bounceIn');
+            level.classList.add('wobbble');
+            level.innerHTML = 2;
+            statusMsg.classList.add('bounceIn');
+            // statusMsg.classList.add('bounceIn');
             timeRemaining +=8;
             m8Play();
         };
         if(score === 80){
-            timeAudio();
             timeRemaining +=10;
             m10Play();
         };
         if(score === 100){
-            timeAudio();
             timeRemaining +=15;
             m10Play();
         };
         if(score === 130){
-            timeAudio();
             timeRemaining +=12;
             m12Play();
         }
         if(score === 170){
-            timeAudio();
             timeRemaining +=13;
             m13Play();
         };
         if(score === 230){
-            timeAudio();
             timeRemaining +=12;
             m12Play();
         }
         if(score === 250){
-            timeAudio();
             timeRemaining +=10;
             m10Play();
         }
         if(score === 280){
-            timeAudio();
             timeRemaining +=8;
             m8Play();
         }
         if(score === 300){
-            timeAudio();
             timeRemaining +=3;
             m3Play();
         }
         if(score === 350){
-            timeAudio();
             // statusMsg.innerHTML = encWords[3]
             timeRemaining +=10;
             m10Play();
         }
         if(score === 450){
-            timeAudio();
             // statusMsg.innerHTML = encWords[3]
             timeRemaining +=15;
             m15Play();
@@ -149,14 +152,6 @@ let scorePoint = () => {
         gameOff();
     }
 }
-let timeAudio = () => timeAddedAudio.play();
-let endAudio = () => gameEndAudio.play();
-let m15Play = () => m15.play();
-let m13Play = () => m13.play();
-let m12Play = () => m12.play();
-let m10Play = () => m10.play();
-let m8Play = () => m8.play();
-let m3Play = () => m3.play();
 
 let highScoreHandler = () => {
     let prevHighScore = localStorage.getItem("High Score");
@@ -188,6 +183,7 @@ let init = function() {
 }
 
 startBtn.addEventListener('click', (e) =>{
+    test.innerHTML = words[Math.floor(Math.random() * words.length)];
     instruction.style.display = 'none';
     e.preventDefault()
     init();
