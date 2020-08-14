@@ -1,0 +1,101 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  /* font-family: "Advent Pro", sans-serif; */
+  font-family: "Dosis", sans-serif;
+  background-image: radial-gradient(
+    circle,
+    #141414,
+    #131313,
+    #131212,
+    #121211,
+    #111110
+  );
+  color: #fffffb;
+}
+
+/* MAIN */
+#main {
+  margin-top: 50px;
+}
+.main-h1 {
+  font-weight: 700;
+  letter-spacing: 1.9px;
+  line-height: 1.8;
+  font-size: 2.2rem;
+}
+.sub-h1 {
+  font-weight: 700;
+  letter-spacing: 1.9px;
+  line-height: 1.8;
+  font-size: 1.7rem;
+}
+.links-ul {
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+  font-family: "Taviraj", serif;
+}
+.links-ul li {
+  display: inline;
+  text-decoration: underline;
+  margin: 0 10px;
+}
+.links-ul li a {
+  color: #fffffb;
+}
+p {
+  font-size: 19px;
+  line-height: 32px;
+}
+.skills {
+  border: 2px solid rgba(128, 128, 128, 0.315);
+}
+.skills li i {
+  font-size: 40px;
+  width: 40px;
+}
+.iconify {
+  font-size: 40px !important;
+}
+a.social-link i {
+  text-decoration: none !important;
+  font-size: 20px;
+  padding: 10px;
+  transition: 0.3s ease-in-out;
+}
+a.social-link:hover {
+  opacity: 0.8;
+}
+
+.project {
+  border: 2px solid #646363ce;
+  border-radius: 5px;
+  min-height: 200px;
+  padding: 10px;
+}
+.project-stack {
+  font-size: 0.75rem;
+  font-weight: 400;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: orange;
+  background-color: rgb(27, 0, 0);
+}
+.name {
+  color: orange !important;
+}
+.container-fluid#loading {
+  background-color: #000000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+}
+.container-fluid#loading .row {
+  height: 100%;
+}
