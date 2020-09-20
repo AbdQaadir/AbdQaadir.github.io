@@ -18,56 +18,456 @@
 
     <!-- FONT -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;200;300;400;500;600;700&family=Taviraj:wght@200;300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap"
       rel="stylesheet"
     />
     <script
       src="https://kit.fontawesome.com/cdc96d509d.js"
       crossorigin="anonymous"
     ></script>
-
-    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/style.css" data-target="my-css" />
     <title>Home</title>
   </head>
   <body>
-    <main class="container">
-      <div class="row justify-content-end">
-        <div class="col-12 col-md-10 text-right">
-          <ul class="links-ul">
+    <div class="container-fluid d-one" id="mobile-nav">
+      <div
+        class="row align-items-center justify-content-center h-100"
+        style="position: relative"
+      >
+        <i class="fas fa-times" id="close"></i>
+        <div class="col-12">
+          <ul class="list-unstyled text-center mobile__navUl">
             <li>
-              <a href="./assets/Lateef Quadri Resume.pdf" target="_blank"
-                >resume</a
+              <a href="#about-me" class="mobile-link">About</a>
+            </li>
+            <li>
+              <a href="#projects" class="mobile-link">Project</a>
+            </li>
+            <li>
+              <a
+                href="https://docs.google.com/document/d/1k3jMqfKybLvLBazE1VrSeDbbMxuXIW27XlwOtKd0o_M/edit?usp=sharing"
+                target="_blank"
+                >Resume</a
               >
             </li>
-
             <li>
-              <a href="./projects/index.html">projects</a>
-            </li>
-            <li>
-              <a href="https://abdqaadir.hashnode.dev/" target="_blank">blog</a>
+              <button class="btn">
+                <a href="mailto:lateef9816@gmail.com" target="_blank"
+                  >Hire me</a
+                >
+              </button>
             </li>
           </ul>
         </div>
       </div>
-      <div class="row justify-content-center text-center" id="main">
-        <div class="col-12">
-          <h4 class="welcome-h1">Hi! 👋</h4>
+    </div>
+
+    <header class="container-fluid" id="header">
+      <div class="row justify-content-end">
+        <div class="col-12 pr-5 text-right d-lg-none">
+          <div id="mobile-toggler"></div>
         </div>
-        <div class="col-12 col-md-8">
-          <h1 class="sub-h1 name my-0">Lateef Quadri.</h1>
-          <ul class="links-ul my-0">
+        <div class="col-12 col-md-10 text-right pr-md-5 d-none d-lg-block">
+          <ul class="links-ul">
+            <li>
+              <a href="#about-me">About</a>
+            </li>
+            <li>
+              <a href="#projects">Project</a>
+            </li>
             <li>
               <a
-                href="https://twitter.com/Abd_Qaadir"
+                href="https://docs.google.com/document/d/1k3jMqfKybLvLBazE1VrSeDbbMxuXIW27XlwOtKd0o_M/edit?usp=sharing"
+                target="_blank"
+                >Resume</a
+              >
+            </li>
+            <li>
+              <button class="btn">
+                <a href="mailto:lateef9816@gmail.com" target="_blank"
+                  >Hire me</a
+                >
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main class="container-fluid">
+      <div class="row justify-content-around align-items-center" id="main">
+        <div class="col-md-8 col-sm-10 col-12">
+          <div data-aos="fade-right" data-aos-duration="5000">
+            <h2 style="color: #fcdab7">Hello, I'm</h2>
+            <h1>Lateef Quadri Olayinka</h1>
+            <p class="pr-md-5">
+              I am a Nigeria based Frontend developer. On a mission to keep
+              developing apps that run on the web.
+
+              <br />
+              <br />
+
+              Curious to know more? Keep scrolling
+            </p>
+          </div>
+          <button class="btn" data-aos="fade-up">
+            <a href="#contact"
+              >Get in touch <i class="fas fa-arrow-right"></i
+            ></a>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <section class="container-fluid" id="about-me">
+      <div class="row justify-content-around">
+        <div
+          class="col-md-10 col-12"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
+          <h2 class="section-header">About Me</h2>
+        </div>
+      </div>
+      <div class="row justify-content-around mt-5">
+        <div
+          class="col-xl-6 col-lg-6 col-md-7 col-sm-10 col-12"
+          data-aos="fade-up"
+        >
+          <p>
+            Hi, I'm a Nigeria based **Frontend Developer** with close 2 years
+            experience building Web Interfaces with cross-platform compability,
+            cross-browser responsiveness and of good performance. I have great
+            passion for technology and cyber security.
+          </p>
+        </div>
+        <div
+          class="col-xl-4 col-lg-4 col-md-5 col-sm-10 col-12 stacks row justify-content-between"
+        >
+          <div
+            class="col-6 px-0"
+            data-aos="fade-up"
+            data-aos-delay="150"
+            data-aos-duration="1000"
+          >
+            <h2 class="mt-4 mt-md-0">Core Stacks</h2>
+            <ul class="list-unstyled">
+              <li>HTML/CSS</li>
+              <li>Bootstrap</li>
+              <li>JavaScript - ES6</li>
+              <li>JQuery</li>
+              <li>React</li>
+              <li>Redux</li>
+            </ul>
+          </div>
+          <div
+            class="col-6 px-0 text-right"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="250"
+          >
+            <h2 class="mt-4 mt-md-0">Others</h2>
+            <ul class="list-unstyled">
+              <li>Firebase</li>
+              <li>Git - Github</li>
+              <li>Netlify</li>
+              <li>Vercel</li>
+              <li>Redux</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-fluid" id="projects">
+      <div class="row justify-content-around">
+        <div
+          class="col-10 mb-2 mb-md-5"
+          data-aos="fade-left"
+          data-aos-delay="150"
+          data-aos-duration="1000"
+        >
+          <h2 class="section-header">Projects</h2>
+        </div>
+      </div>
+
+      <div class="row project justify-content-center px-3">
+        <a
+          href="https://abd-qaad-netflix-clone.vercel.app/"
+          target="_blank"
+          class="col-xl-6 col-lg-6 col-md-7 col-sm-6 col-12 project__img"
+          data-aos="fade-right"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+        >
+          <div class="overlay d-none d-md-block"></div>
+          <img src="./assets/mockup-netflix.png" alt="" class="w-100" />
+        </a>
+
+        <div
+          class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-12 d-flex align-self-center flex-wrap h-100"
+          data-aos="fade-left"
+          data-aos-delay="100"
+          data-aos-duration="1000"
+        >
+          <h2 class="my-3 d-md-none">
+            <span
+              ><a
+                href="https://abd-qaad-netflix-clone.vercel.app/"
+                target="_blank"
+                class=""
+              >
+                Netflix Clone
+                <i class="fas fa-external-link-alt"></i> </a
+            ></span>
+          </h2>
+          <h2 class="my-3 d-none d-md-block">Netflix Clone</h2>
+          <p class="my-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem,
+            assumenda repudiandae, voluptatem amet dolore sit, ipsa accusantium
+            architecto id esse nesciunt quasi ad reiciendis excepturi? Non
+            quisquam perferendis eos obcaecati.
+          </p>
+
+          <div class="w-100 d-block my-2 text-right">
+            <span class="project-tag">React</span>
+            <span class="project-tag">Axios</span>
+            <span class="project-tag">Movie-Trailer</span>
+            <span class="project-tag">Youtube</span>
+          </div>
+          <a
+            href="https://abd-qaad-netflix-clone.vercel.app/"
+            target="_blank"
+            class="text-right w-100 d-none mt-4 d-md-block"
+          >
+            <i class="fas fa-external-link-alt ml-auto"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="row project justify-content-center px-3">
+        <a
+          href="https://countries-data.vercel.app/"
+          target="_blank"
+          class="col-xl-6 col-lg-6 col-md-7 col-sm-6 col-12 project__img"
+          data-aos="fade-left"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+        >
+          <div class="overlay d-none d-md-block"></div>
+          <img src="./assets/mockup-countries.png" alt="" class="w-100" />
+        </a>
+
+        <div
+          class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-12 d-flex align-self-center flex-wrap h-100 order-md-first"
+          data-aos="fade-right"
+          data-aos-delay="100"
+          data-aos-duration="1000"
+        >
+          <h2 class="my-3 d-md-none">
+            <span
+              ><a
+                href="https://countries-data.vercel.app/"
+                target="_blank"
+                class=""
+              >
+                Countries REST API Data
+                <i class="fas fa-external-link-alt"></i> </a
+            ></span>
+          </h2>
+          <h2 class="my-3 d-none d-md-block">Countries REST API Data</h2>
+          <p class="my-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem,
+            assumenda repudiandae, voluptatem amet dolore sit, ipsa accusantium
+            architecto id esse nesciunt quasi ad reiciendis excepturi? Non
+            quisquam perferendis eos obcaecati.
+          </p>
+
+          <div class="w-100 d-block my-2 text-right">
+            <span class="project-tag">React</span>
+            <span class="project-tag">REST API</span>
+            <span class="project-tag">React-Router</span>
+            <span class="project-tag">Dark Mode</span>
+          </div>
+          <a
+            href="https://countries-data.vercel.app/"
+            target="_blank"
+            class="text-right w-100 d-none mt-4 d-md-block"
+          >
+            <i class="fas fa-external-link-alt ml-auto"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="row project justify-content-center px-3">
+        <a
+          href="https://gamidice.netlify.app"
+          target="_blank"
+          class="col-xl-6 col-lg-6 col-md-7 col-sm-6 col-12 project__img"
+          data-aos="fade-right"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+        >
+          <div class="overlay d-none d-md-block"></div>
+          <img src="./assets/mockup-pig-game.png" alt="" class="w-100" />
+        </a>
+
+        <div
+          class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-12 d-flex align-self-center flex-wrap h-100"
+          data-aos="fade-left"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+        >
+          <h2 class="my-3 d-md-none">
+            <span
+              ><a href="https://gamidice.netlify.app" target="_blank" class="">
+                Pig Game (Dice)
+                <i class="fas fa-external-link-alt"></i> </a
+            ></span>
+          </h2>
+          <h2 class="my-3 d-none d-md-block">Pig Game (Dice)</h2>
+          <p class="my-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem,
+            assumenda repudiandae, voluptatem amet dolore sit, ipsa accusantium
+            architecto id esse nesciunt quasi ad reiciendis excepturi? Non
+            quisquam perferendis eos obcaecati.
+          </p>
+
+          <div class="w-100 d-block my-2 text-right">
+            <span class="project-tag">HTML</span>
+            <span class="project-tag">CSS</span>
+            <span class="project-tag">Bootstrap</span>
+            <span class="project-tag">Vanilla JS</span>
+          </div>
+          <a
+            href="https://gamidice.netlify.app"
+            target="_blank"
+            class="text-right w-100 d-none mt-4 d-md-block"
+          >
+            <i class="fas fa-external-link-alt ml-auto"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="row project justify-content-center px-3">
+        <a
+          href="https://vowelic.netlify.app/"
+          target="_blank"
+          class="col-xl-6 col-lg-6 col-md-7 col-sm-6 col-12 project__img"
+          data-aos="fade-left"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+        >
+          <div class="overlay d-none d-md-block"></div>
+          <img src="./assets/mockup-vowelic.png" alt="" class="w-100" />
+        </a>
+
+        <div
+          class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-12 d-flex align-self-center flex-wrap h-100 order-md-first"
+          data-aos="fade-right"
+          data-aos-delay="100"
+          data-aos-duration="1000"
+        >
+          <h2 class="my-3 d-md-none">
+            <span
+              ><a href="https://vowelic.netlify.app/" target="_blank" class="">
+                Vowelic
+                <i class="fas fa-external-link-alt"></i> </a
+            ></span>
+          </h2>
+          <h2 class="my-3 d-none d-md-block">Vowelic</h2>
+          <p class="my-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem,
+            assumenda repudiandae, voluptatem amet dolore sit, ipsa accusantium
+            architecto id esse nesciunt quasi ad reiciendis excepturi? Non
+            quisquam perferendis eos obcaecati.
+          </p>
+
+          <div class="w-100 d-block my-2 text-right">
+            <span class="project-tag">HTML</span>
+            <span class="project-tag">CSS</span>
+            <span class="project-tag">Bootstrap</span>
+            <span class="project-tag">Vanilla JavaScript</span>
+          </div>
+          <a
+            href="https://vowelic.netlify.app/"
+            target="_blank"
+            class="text-right w-100 d-none mt-4 d-md-block"
+          >
+            <i class="fas fa-external-link-alt ml-auto"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="row project justify-content-center px-3">
+        <a
+          href="https://covitrace.netlify.app/"
+          target="_blank"
+          class="col-xl-6 col-lg-6 col-md-7 col-sm-6 col-12 project__img"
+          data-aos="fade-right"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+        >
+          <div class="overlay d-none d-md-block"></div>
+          <img src="./assets/mockup-covid.png" alt="" class="w-100" />
+        </a>
+
+        <div
+          class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-12 d-flex align-self-center flex-wrap h-100"
+          data-aos="fade-left"
+          data-aos-delay="100"
+          data-aos-duration="1000"
+        >
+          <h2 class="my-3 d-md-none">
+            <span
+              ><a
+                href="https://covitrace.netlify.app/"
+                target="_blank"
+                class=""
+              >
+                Covid-19 Tracker
+                <i class="fas fa-external-link-alt"></i> </a
+            ></span>
+          </h2>
+          <h2 class="my-3 d-none d-md-block">Covid-19 Tracker</h2>
+          <p class="my-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem,
+            assumenda repudiandae, voluptatem amet dolore sit, ipsa accusantium
+            architecto id esse nesciunt quasi ad reiciendis excepturi? Non
+            quisquam perferendis eos obcaecati.
+          </p>
+
+          <div class="w-100 d-block my-2 text-right">
+            <span class="project-tag">React</span>
+            <span class="project-tag">Axios</span>
+            <span class="project-tag">Bootstrap</span>
+            <span class="project-tag">REST API</span>
+          </div>
+          <a
+            href="https://covitrace.netlify.app/"
+            target="_blank"
+            class="text-right w-100 d-none mt-4 d-md-block"
+          >
+            <i class="fas fa-external-link-alt ml-auto"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-fluid" id="contact">
+      <div class="row justify-content-center">
+        <div
+          class="col-xl-5 col-lg-5 col-md-5 col-sm-10 col-12 connect py-4 p-md-4"
+        >
+          <h2>You contact me via:</h2>
+
+          <ul class="list-unstyled d-flex justify-content-center">
+            <li>
+              <a
+                href="mailto:lateef9816@gmail.com"
                 target="_blank"
                 class="social-link"
-              >
-                <i class="fab fa-twitter-square"></i
+                ><i class="fas fa-envelope"></i
               ></a>
             </li>
             <li>
@@ -80,71 +480,25 @@
             </li>
             <li>
               <a
-                href="https://www.linkedin.com/in/lateef-quadri-b45044171/"
+                href="https://twitter.com/abd_qaadir"
                 target="_blank"
                 class="social-link"
-                ><i class="fab fa-linkedin"></i
+                ><i class="fab fa-twitter"></i
               ></a>
             </li>
-          </ul>
-          <p>
-            I am a Nigeria based <strong>Frontend Developer</strong> with close
-            to two years experience building Web Interfaces with cross-platform
-            compability, cross-browser responsiveness and of good performance.
-
-            <br />
-
-            I have great passion for technology and cyber security.
-          </p>
-        </div>
-      </div>
-    </main>
-
-    <section id="skills" class="container">
-      <div class="row justify-content-center">
-        <div class="col-11 col-md-10 my-2 skills">
-          <h1 class="sub-h1">Skills</h1>
-          <ul
-            class="list-unstyled d-flex justify-content-between justify-content-md-around"
-          >
-            <li><i class="fab fa-html5"></i></li>
-            <li><i class="fab fa-css3-alt"></i></li>
-            <li><i class="fab fa-js-square"></i></li>
-            <li><i class="fab fa-bootstrap"></i></li>
-            <li><i class="fab fa-react"></i></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="row justify-content-center">
-        <div class="col-11 col-md-10 my-2 skills">
-          <h1 class="sub-h1">Tools</h1>
-          <ul
-            class="list-unstyled d-flex justify-content-between justify-content-md-around"
-          >
-            <li><i class="fab fa-github"></i></li>
-            <li><i class="fab fa-npm"></i></li>
-            <li><i class="fab fa-git-square"></i></li>
-            <li><i class="fab fa-slack"></i></li>
             <li>
-              <span
-                class="iconify"
-                data-icon="cib:netlify"
-                data-inline="false"
-              ></span>
+              <a
+                href="https://abdqaadir.hashnode.dev"
+                target="_blank"
+                class="social-link"
+                ><i class="fas fa-pen-square"></i
+              ></a>
             </li>
           </ul>
         </div>
       </div>
     </section>
 
-    <div class="container-fluid d-none" id="loading">
-      <div class="row justify-content-center align-items-center">
-        <div class="col-10 text-center">
-          <img src="./assets/loading.svg" alt="" />
-        </div>
-      </div>
-    </div>
     <!-- <button class="btn btn-primary toggler">Change Vision</button> -->
     <!-- Optional JavaScript -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script> -->
@@ -168,18 +522,23 @@
     <!-- Anime -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
     <script src="./js/main.js"></script>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      $(document).ready(() => {
-        // $(".toggler").click(() => {
-        //   let cssFiles = document.querySelectorAll("link");
-        //   let myCSS = cssFiles[cssFiles.length - 1];
-        //   myCSS.prop("href", "/");
-        // });
-
-        setTimeout(() => {
-          $("#loading").addClass("d-none");
-        }, 3000);
+      AOS.init();
+      const toggler = document.getElementById("mobile-toggler");
+      const close = document.getElementById("close");
+      const mobileNavLinks = document.getElementsByClassName("mobile-link");
+      const mobileNav = document.getElementById("mobile-nav");
+      toggler.addEventListener("click", () => {
+        mobileNav.style.marginLeft = "0";
+      });
+      close.addEventListener("click", () => {
+        mobileNav.style.marginLeft = "-100vw";
+      });
+      Array.from(mobileNavLinks).forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileNav.style.marginLeft = "-100vw";
+        });
       });
     </script>
   </body>
