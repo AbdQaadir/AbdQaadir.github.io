@@ -142,9 +142,10 @@ h2.section-header {
   margin-bottom: 800px;
 } */
 #about-me p {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.8;
   color: #ecf4f3;
+  text-align: justify;
 }
 #about-me .stacks .list-unstyled li {
   font-size: 18px;
