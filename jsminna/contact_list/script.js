@@ -3,7 +3,6 @@ let numberData = [];
 const NumberRow = document.querySelector("#contact-row");
 const inputField = document.getElementById("search-input");
 const errorMsg = document.querySelector(".error-msg");
-// const copyInput = document.querySelector("#copy-input");
 const fetchingText = document.querySelector(".fetching-text");
 
 fetch("https://emajency.com/js/numbers.json")
@@ -21,8 +20,6 @@ fetch("https://emajency.com/js/numbers.json")
 })
 
 inputField.onkeydown = handleChange;
-// phoneIcon.onclick = handleClick;
-
 function handleChange(e){
     const val = e.target.value;
     console.log(val)
@@ -33,17 +30,6 @@ function handleChange(e){
         PopulateUI(numberData);
     }
 }
-
-// function handleClick(e) {
-//     <i class="fas fa-phone" data-number=${item.number} onclick="handleClick(this)"></i>
-//     copyInput.value = "";
-//     const num = e.getAttribute("data-number");
-//     copyInput.value = num;
-//     copyInput.focus();
-//     copyInput.select();
-//     document.execCommand("copy");
-//     alert(`${num} copied to clipboard`)
-// }
 
 function PopulateUI(data) {
     NumberRow.innerHTML = "";
