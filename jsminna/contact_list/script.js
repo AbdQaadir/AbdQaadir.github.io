@@ -3,7 +3,7 @@ let numberData = [];
 const NumberRow = document.querySelector("#contact-row");
 const inputField = document.getElementById("search-input");
 const errorMsg = document.querySelector(".error-msg");
-const copyInput = document.querySelector("#copy-input");
+// const copyInput = document.querySelector("#copy-input");
 const fetchingText = document.querySelector(".fetching-text");
 
 fetch("https://emajency.com/js/numbers.json")
@@ -34,15 +34,16 @@ function handleChange(e){
     }
 }
 
-function handleClick(e) {
-    copyInput.value = "";
-    const num = e.getAttribute("data-number");
-    copyInput.value = num;
-    copyInput.focus();
-    copyInput.select();
-    document.execCommand("copy");
-    alert(`${num} copied to clipboard`)
-}
+// function handleClick(e) {
+//     <i class="fas fa-phone" data-number=${item.number} onclick="handleClick(this)"></i>
+//     copyInput.value = "";
+//     const num = e.getAttribute("data-number");
+//     copyInput.value = num;
+//     copyInput.focus();
+//     copyInput.select();
+//     document.execCommand("copy");
+//     alert(`${num} copied to clipboard`)
+// }
 
 function PopulateUI(data) {
     NumberRow.innerHTML = "";
@@ -53,7 +54,7 @@ function PopulateUI(data) {
             <h4>${item.name}</h4>
             <h2>${item.number}</h2>
           </div>
-          <i class="fas fa-phone" data-number=${item.number} onclick="handleClick(this)"></i>
+          <a href=tel:${item.number}><i class="fas fa-phone"></i></a>
         </div>
       </div>        
         `
