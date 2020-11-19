@@ -4,10 +4,12 @@ const NumberRow = document.querySelector("#contact-row");
 const inputField = document.getElementById("search-input");
 const errorMsg = document.querySelector(".error-msg");
 const copyInput = document.querySelector("#copy-input");
+const fetchingText = document.querySelector(".fetching-text");
 
 fetch("https://emajency.com/js/numbers.json")
 .then(res => res.json())
 .then((data) => {
+    fetchingText.style.display = "none";
     numberData = [...data];
     filtered = [...data];
     PopulateUI(data);
