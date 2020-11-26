@@ -90,7 +90,7 @@
     <title>Home</title>
   </head>
   <body>
-    <div class="container-fluid d-one" id="mobile-nav">
+    <div class="container-fluid" id="mobile-nav">
       <div
         class="row align-items-center justify-content-center h-100"
         style="position: relative"
@@ -103,6 +103,9 @@
             </li>
             <li>
               <a href="#projects" class="mobile-link">Project</a>
+            </li>
+            <li>
+              <a href="https://abdqaadir.hashnode.dev" target="_blank" rel="noreferer noopener">Blog</a>
             </li>
             <li>
               <a
@@ -125,8 +128,8 @@
 
     <header class="container-fluid" id="header">
       <div class="row justify-content-end">
-        <div class="col-12 pr-5 text-right d-lg-none">
-          <div id="mobile-toggler"></div>
+        <div class="col-12 pr-5 py-4 text-right d-lg-none">
+          <button class="fas fa-bars" id="mobile-toggler"></button>
         </div>
         <div class="col-12 col-md-10 text-right pr-md-5 d-none d-lg-block">
           <ul class="links-ul">
@@ -134,7 +137,10 @@
               <a href="#about-me">About</a>
             </li>
             <li>
-              <a href="#projects">Project</a>
+              <a href="#projects">Projects</a>
+            </li>
+            <li>
+              <a href="https://abdqaadir.hashnode.dev" target="_blank" rel="noreferer noopener">Blog</a>
             </li>
             <li>
               <a href="#contact">Contact</a>
@@ -614,26 +620,8 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
     <!-- Anime -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>    
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-      const toggler = document.getElementById("mobile-toggler");
-      const close = document.getElementById("close");
-      const mobileNavLinks = document.getElementsByClassName("mobile-link");
-      const mobileNav = document.getElementById("mobile-nav");
-      toggler.addEventListener("click", () => {
-        mobileNav.style.marginLeft = "0";
-      });
-      close.addEventListener("click", () => {
-        mobileNav.style.marginLeft = "-100vw";
-      });
-      Array.from(mobileNavLinks).forEach((link) => {
-        link.addEventListener("click", () => {
-          mobileNav.style.marginLeft = "-100vw";
-        });
-      });
-    </script>
+    <script src="./js/main.js"></script>
   </body>
 </html>

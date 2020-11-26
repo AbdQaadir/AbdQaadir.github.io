@@ -43,25 +43,14 @@ h2.section-header {
   font-size: 35px;
 }
 #mobile-toggler {
-  width: 20px;
-  height: 4px;
-  background: #fff;
-  margin: 20px 0 0 20px;
-  position: absolute;
-  top: 40px;
-  right: 90px;
-  font-size: 45px;
+  background: none;
+  color: #fff;
+  font-size: 25px;
   cursor: pointer;
   transition: 0.3s;
+  margin-left: auto;
 }
 
-#mobile-toggler:before {
-  display: block;
-  content: "";
-  width: 28px;
-  height: 4px;
-  box-shadow: 0 -8px 0 0 #fff, 0 8px 0 0 #fff;
-}
 .mobile__navUl li {
   font-size: 35px;
   margin: 30px 0;
@@ -230,15 +219,18 @@ h2.section-header {
   color: #ff7e67;
 }
 @media only screen and (max-width: 400px) {
+  body {
+    padding: 0 13px;
+  }
   #main {
-    margin-top: 30px;
+    margin-top: 100px;
   }
   #main h2 {
     font-size: 19px;
     font-weight: 300;
   }
-  h1 {
-    font-size: 1.6rem;
+  #main h1 {
+    font-size: 1.7rem;
   }
   h2 {
     font-size: 1.2rem !important;
@@ -247,7 +239,7 @@ h2.section-header {
     font-size: 1.7rem !important;
   }
   #main p {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 300;
   }
   #main .btn {
