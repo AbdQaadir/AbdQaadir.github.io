@@ -29,14 +29,16 @@ function UpdateUI(){
     const minutes = date.getMinutes();
 
     timeEl.innerHTML = `${hour}:${minutes}`
-    container.style.backgroundImage = "url('./assets/images/bg-morning.jpg')";
 
     if(hour > 11 && hour <= 16){
         dayStatus.innerHTML = "afternoon";
+        container.style.backgroundImage = "url('./assets/images/bg-afternoon.jpg')";
     }else if(hour > 16 && hour < 23 && minutes <= 59 ){
         dayStatus.innerHTML = "evening";
+        container.style.backgroundImage = "url('./assets/images/bg-night.jpg')";
     }else{
         dayStatus.innerHTML = "morning";
+        container.style.backgroundImage = "url('./assets/images/bg-morning.jpg')";
     }
 }
 
