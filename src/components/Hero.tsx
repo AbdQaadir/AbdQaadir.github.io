@@ -11,7 +11,7 @@ export function Hero() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section className="relative flex min-h-[80vh] flex-col items-center justify-center overflow-hidden py-6 md:py-24 lg:py-32">
+    <section className="relative flex min-h-[75vh] flex-col items-center justify-center overflow-hidden py-0 md:py-24 lg:py-32">
        {/* Background Elements */}
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-background to-background"></div>
       
@@ -70,11 +70,15 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-extrabold tracking-tight text-foreground"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-extrabold tracking-tight text-foreground"
         >
-          <span className="text-muted-foreground"><TextReveal>Product Focused</TextReveal></span>
-          <br />
-          <span className="text-primary"><TextReveal>Engineer</TextReveal></span>
+          <span className="text-muted-foreground inline">
+            <TextReveal>Product Focused</TextReveal>
+          </span>
+          <br />  
+          <span className="text-primary inline">
+            <TextReveal>Engineer</TextReveal>
+          </span>
         </motion.h1>
 
         <motion.p

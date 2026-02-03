@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Mail, MessageSquare } from "lucide-react";
+import { LucideTwitter, Mail, MessageSquare } from "lucide-react";
 import { SocialIcon } from "react-social-icons"
 import Link from "next/link";
 import { TextReveal } from "@/components/ui/text-reveal";
@@ -18,7 +18,7 @@ export function Contact() {
            viewport={{ once: true }}
            className="max-w-2xl mx-auto space-y-6"
          >
-           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter">
+           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-6">
              <TextReveal>Let's Build Something Amazing</TextReveal>
            </h2>
            <p className="text-muted-foreground text-base md:text-lg">
@@ -32,11 +32,10 @@ export function Contact() {
                  <Mail className="h-6 w-6" /> Say Hello
                </Link>
              </Button>
-             <Button size="lg" variant="outline" className="h-12 px-8" asChild>
-              <>
-               <SocialIcon url="https://x.com/mufty_codes" target="_blank" network="x" fgColor="currentColor" bgColor="transparent" style={{ height: 30, width: 30 }} className="text-muted-foreground hover:text-foreground transition-colors" />
-               DM on X
-               </>
+              <Button size="lg" className="h-12 px-8" variant="outline" asChild>
+               <Link href="https://x.com/mufty_codes">
+                 <LucideTwitter className="h-6 w-6" /> DM on X
+               </Link>
              </Button>
            </div>
          </motion.div>
