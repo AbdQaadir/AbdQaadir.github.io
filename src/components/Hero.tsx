@@ -5,12 +5,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight, Download, Eye, Rocket } from "lucide-react";
+import { TextReveal } from "@/components/ui/text-reveal";
 
 export function Hero() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section className="relative flex min-h-[80vh] md:min-h-[90vh] flex-col items-center justify-center overflow-hidden py-6 md:py-24 lg:py-32">
+    <section className="relative flex min-h-[80vh] flex-col items-center justify-center overflow-hidden py-6 md:py-24 lg:py-32">
        {/* Background Elements */}
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-background to-background"></div>
       
@@ -69,20 +70,21 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-3xl md:text-4xl font-heading font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-foreground"
+          className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-extrabold tracking-tight text-foreground"
         >
-          Senior Product <br className="hidden md:inline" />
-          <span className="text-muted-foreground">Focused Engineer</span>
+          <span className="text-muted-foreground"><TextReveal>Product Focused</TextReveal></span>
+          <br />
+          <span className="text-primary"><TextReveal>Engineer</TextReveal></span>
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mx-auto mt-6 max-w-[700px] text-base md:text-lg text-muted-foreground md:text-xl"
+          className="mx-auto mt-6 max-w-[700px] text-base md:text-xl text-muted-foreground"
         >
           I'm <strong>Quadri Lateef</strong>, a Senior Product Focused Engineer with <strong>5+ years</strong> of experience.
-          I build robust, scalable applications using a full arsenal of tools including <strong>NestJS, Prisma, PostgreSQL, and Clerk</strong>.
+          I build robust, scalable applications using a full arsenal of tools including <strong>NextJS, NestJS, Prisma, PostgreSQL, and Clerk</strong>.
         </motion.p>
 
         <motion.div
@@ -91,12 +93,12 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="mt-10 flex gap-4 sm:flex-row flex-wrap"
         >
-          <Button size="lg" className="h-12 px-8 text-base" asChild>
+          <Button size="lg" className="h-12 px-8 md:px-14! text-base rounded-full" asChild>
             <Link href="#projects">
               My Projects <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
-          <Button size="lg" variant="outline" className="h-12 px-8 text-base" asChild>
+          <Button size="lg" variant="outline" className="h-12 px-8 md:px-14! text-base rounded-full" asChild>
             <Link href="https://drive.google.com/file/d/1Xn_NtHLMehPIt7BL5ml4LilHMMuIPLs3/view?usp=sharing" target="_blank">
               Resume <Eye className="ml-2 h-4 w-4" />
             </Link>

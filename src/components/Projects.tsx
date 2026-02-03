@@ -1,12 +1,88 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { MouseEvent } from "react";
+import { TextReveal } from "@/components/ui/text-reveal";
+
+function SpotlightCard({ project, index }: { project: any, index: number }) {
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  function handleMouseMove({ currentTarget, clientX, clientY }: MouseEvent) {
+    const { left, top } = currentTarget.getBoundingClientRect();
+    mouseX.set(clientX - left);
+    mouseY.set(clientY - top);
+  }
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      viewport={{ once: true }}
+      className="h-full group relative border border-border/50 bg-card/50 overflow-hidden rounded-xl"
+      onMouseMove={handleMouseMove}
+    >
+      <motion.div
+        className="pointer-events-none absolute -inset-px opacity-0 transition duration-300 group-hover:opacity-100"
+        style={{
+          background: useMotionTemplate`
+            radial-gradient(
+              650px circle at ${mouseX}px ${mouseY}px,
+              rgba(14, 165, 233, 0.15),
+              transparent 80%
+            )
+          `,
+        }}
+      />
+      <div className="flex flex-col h-full relative">
+          <div className="aspect-video w-full relative overflow-hidden bg-muted">
+              {/* Background Image with Fallback gradient */}
+             <div className="absolute inset-0 bg-linear-to-br from-primary/20 to-secondary/20 z-0" />
+             <Image 
+               src={project.image} 
+               alt={project.title} 
+               fill 
+               className="object-fill transition-transform duration-500 group-hover:scale-105 opacity-80 group-hover:opacity-100"
+               onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+               }}
+             />
+             
+             {/* Overlay */}
+             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300 z-10" />
+
+             {/* Title Overlay on Image */}
+             <div className="absolute bottom-0 left-0 p-6 z-20 w-full bg-linear-to-t from-black/80 to-transparent">
+                <h3 className="text-2xl font-bold text-white font-heading mb-1">{project.title}</h3>
+             </div>
+          </div>
+          
+          <CardContent className="flex-1 pt-6">
+            <p className="text-muted-foreground mb-4 text-sm leading-relaxed line-clamp-3">{project.description}</p>
+            <div className="flex flex-wrap gap-2">
+              {project.tags.map((tag: string) => (
+                <Badge key={tag} variant="secondary" className="bg-secondary/50 font-normal">{tag}</Badge>
+              ))}
+            </div>
+          </CardContent>
+          <CardFooter className="py-3">
+            <Button asChild className="w-full" variant="outline">
+              <Link href={project.liveUrl} target="_blank">
+                View Project <ExternalLink className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </CardFooter>
+      </div>
+    </motion.div>
+  );
+}
 
 const featuredProjects = [
   {
@@ -33,7 +109,7 @@ const featuredProjects = [
   {
     title: "MuftyBrands",
     description: "E-commerce platform for antiglare glasses and accessories. Optimizing the eyewear shopping experience.",
-    tags: ["E-commerce", "Full Stack", "Business"],
+    tags: ["E-commerce", "Full Stack", "Business", "NestJS", "Prisma", "PostgreSQL", "Product Engineering"],
     liveUrl: "https://www.muftybrands.com",
     image: "/assets/projects/muftybrands.png"
   },
@@ -84,7 +160,9 @@ export function Projects() {
       <div className="container px-4 md:px-6 mx-auto">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
           <div className="space-y-2">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold tracking-tighter">Featured Work</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold tracking-tighter">
+              <TextReveal>Featured Work</TextReveal>
+            </h2>
             <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed">
               Selected projects showcasing product engineering and full-stack capabilities.
             </p>
@@ -92,59 +170,10 @@ export function Projects() {
         </div>
         <div className="grid gap-8 grid-cols-1 md:grid-cols-2">
           {featuredProjects.map((project, index) => (
-            <motion.div
-              key={project.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="h-full"
-            >
-              <Card className="h-full flex flex-col overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300 group">
-                <div className="aspect-video w-full relative overflow-hidden bg-muted">
-                    {/* Background Image with Fallback gradient */}
-                   <div className="absolute inset-0 bg-linear-to-br from-primary/20 to-secondary/20 z-0" />
-                   <Image 
-                     src={project.image} 
-                     alt={project.title} 
-                     fill 
-                     className="object-fill transition-transform duration-500 group-hover:scale-105 opacity-80 group-hover:opacity-100"
-                     onError={(e) => {
-                        // Fallback logic could go here if needed, but styling handles missing img reasonably well
-                        e.currentTarget.style.display = 'none';
-                     }}
-                   />
-                   
-                   {/* Overlay */}
-                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300 z-10" />
-
-                   {/* Title Overlay on Image */}
-                   <div className="absolute bottom-0 left-0 p-6 z-20 w-full bg-linear-to-t from-black/80 to-transparent">
-                      <h3 className="text-2xl font-bold text-white font-heading mb-1">{project.title}</h3>
-                   </div>
-                </div>
-                
-                <CardContent className="flex-1 pt-6">
-                  <p className="text-muted-foreground mb-4 text-sm leading-relaxed line-clamp-3">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map(tag => (
-                      <Badge key={tag} variant="secondary" className="bg-secondary/50 font-normal">{tag}</Badge>
-                    ))}
-                  </div>
-                </CardContent>
-                <CardFooter>
-                  <Button asChild className="w-full" variant="outline">
-                    <Link href={project.liveUrl} target="_blank">
-                      View Project <ExternalLink className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
-                </CardFooter>
-              </Card>
-            </motion.div>
+            <SpotlightCard key={project.title} project={project} index={index} />
           ))}
         </div>
       </div>
-
       {/* Legacy Section */}
       <div className="container px-4 md:px-6 mx-auto">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
@@ -163,16 +192,16 @@ export function Projects() {
             >
               <Card className="h-full flex flex-col border-border/30 bg-card/30 hover:bg-card/50 transition-colors group">
                  <div className="aspect-[2/1] w-full relative overflow-hidden bg-muted rounded-t-lg">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent z-0" />
+                    <div className="absolute inset-0 bg-linear-to-br from-primary/10 to-transparent z-0" />
                     <Image 
-                     src={project.image} 
-                     alt={project.title} 
-                     fill 
-                     className="object-cover opacity-60 group-hover:opacity-90 transition-opacity"
-                     onError={(e) => {
-                        e.currentTarget.style.display = 'none';
-                     }}
-                   />
+                      src={project.image} 
+                      alt={project.title} 
+                      fill 
+                      className="object-cover opacity-60 group-hover:opacity-90 transition-opacity"
+                      onError={(e) => {
+                         e.currentTarget.style.display = 'none';
+                      }}
+                    />
                  </div>
                 <CardHeader className="pb-2">
                   <CardTitle className="text-lg font-heading">{project.title}</CardTitle>

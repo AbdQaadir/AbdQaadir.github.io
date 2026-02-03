@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Mail, MessageSquare } from "lucide-react";
 import { SocialIcon } from "react-social-icons"
 import Link from "next/link";
+import { TextReveal } from "@/components/ui/text-reveal";
 
 export function Contact() {
   return (
@@ -17,7 +18,9 @@ export function Contact() {
            viewport={{ once: true }}
            className="max-w-2xl mx-auto space-y-6"
          >
-           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter">Let's Build Something Amazing</h2>
+           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter">
+             <TextReveal>Let's Build Something Amazing</TextReveal>
+           </h2>
            <p className="text-muted-foreground text-base md:text-lg">
              I'm currently looking for new opportunities. Whether you have a question, a project idea, 
              or just want to say hi, my inbox is always open.
