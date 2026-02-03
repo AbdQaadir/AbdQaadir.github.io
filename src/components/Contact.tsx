@@ -30,9 +30,10 @@ export function Contact() {
                </Link>
              </Button>
              <Button size="lg" variant="outline" className="h-12 px-8" asChild>
-               <Link href="https://x.com/mufty_codes" target="_blank">
-                 <SocialIcon network="x" className="h-4 w-4" /> DM on X
-               </Link>
+              <>
+               <SocialIcon url="https://x.com/mufty_codes" target="_blank" network="x" fgColor="currentColor" bgColor="transparent" style={{ height: 30, width: 30 }} className="text-muted-foreground hover:text-foreground transition-colors" />
+               DM on X
+               </>
              </Button>
            </div>
          </motion.div>
