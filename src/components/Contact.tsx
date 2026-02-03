@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Mail, MessageSquare } from "lucide-react";
+import { SocialIcon } from "react-social-icons"
 import Link from "next/link";
 
 export function Contact() {
@@ -25,12 +26,12 @@ export function Contact() {
            <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
              <Button size="lg" className="h-12 px-8" asChild>
                <Link href="mailto:lateef9816@gmail.com">
-                 <Mail className="mr-2 h-4 w-4" /> Say Hello
+                 <Mail className="h-6 w-6" /> Say Hello
                </Link>
              </Button>
              <Button size="lg" variant="outline" className="h-12 px-8" asChild>
                <Link href="https://x.com/mufty_codes" target="_blank">
-                 <MessageSquare className="mr-2 h-4 w-4" /> DM on X
+                 <SocialIcon network="x" className="h-4 w-4" /> DM on X
                </Link>
              </Button>
            </div>

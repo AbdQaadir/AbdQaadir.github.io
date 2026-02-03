@@ -1,14 +1,17 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight, Download, Eye } from "lucide-react";
+import { ArrowRight, Download, Eye, Rocket } from "lucide-react";
 
 export function Hero() {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <section className="relative flex min-h-[90vh] flex-col items-center justify-center overflow-hidden py-12 md:py-24 lg:py-32">
-       {/* Background Elements (Optional for that AI feel) */}
+       {/* Background Elements */}
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-background to-background"></div>
       
       <div className="container px-4 md:px-6 relative z-10 flex flex-col items-center text-center">
@@ -16,10 +19,50 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center rounded-full border border-border bg-background/50 backdrop-filter px-3 py-1 text-sm font-medium text-muted-foreground mb-6"
+          className="relative mb-6 group cursor-pointer"
+          onHoverStart={() => setIsHovered(true)}
+          onHoverEnd={() => setIsHovered(false)}
         >
-          <span className="flex h-2 w-2 rounded-full bg-primary mr-2"></span>
-          Available for new opportunities
+          <div className="absolute inset-0 bg-linear-to-r from-primary/20 via-primary/50 to-primary/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          
+          <div className="relative inline-flex items-center rounded-full border border-border bg-background/80 backdrop-blur-md px-4 py-1.5 text-sm font-medium overflow-hidden">
+             
+             {/* Animating Border Gradient */}
+             <motion.div 
+               className="absolute inset-0 bg-linear-to-r from-transparent via-primary/20 to-transparent w-[200%]"
+               animate={{ x: isHovered ? ["-100%", "0%"] : "-100%" }}
+               transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
+             />
+
+             <AnimatePresence mode="wait">
+               {isHovered ? (
+                  <motion.div
+                     key="hover"
+                     initial={{ y: 20, opacity: 0 }}
+                     animate={{ y: 0, opacity: 1 }}
+                     exit={{ y: -20, opacity: 0 }}
+                     className="flex items-center gap-2 text-primary z-10"
+                  >
+                      <Rocket className="h-4 w-4 fill-current" />
+                      <span>Ready to deploy excellence</span>
+                  </motion.div>
+               ) : (
+                  <motion.div
+                     key="normal"
+                     initial={{ y: -20, opacity: 0 }}
+                     animate={{ y: 0, opacity: 1 }}
+                     exit={{ y: 20, opacity: 0 }}
+                     className="flex items-center gap-2 text-muted-foreground z-10"
+                  >
+                      <span className="relative flex h-2 w-2">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                      </span>
+                      <span>Available for new opportunities</span>
+                  </motion.div>
+               )}
+             </AnimatePresence>
+          </div>
         </motion.div>
 
         <motion.h1
@@ -38,7 +81,7 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mx-auto mt-6 max-w-[700px] text-lg text-muted-foreground md:text-xl"
         >
-          I'm <strong>Lateef Quadri</strong>, a Senior Product Focused Engineer with <strong>5+ years</strong> of experience.
+          I'm <strong>Quadri Lateef</strong>, a Senior Product Focused Engineer with <strong>5+ years</strong> of experience.
           I build robust, scalable applications using a full arsenal of tools including <strong>NestJS, Prisma, PostgreSQL, and Clerk</strong>.
         </motion.p>
 
