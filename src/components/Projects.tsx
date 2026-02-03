@@ -84,7 +84,7 @@ export function Projects() {
       <div className="container px-4 md:px-6 mx-auto">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
           <div className="space-y-2">
-            <h2 className="text-3xl font-heading font-bold tracking-tighter sm:text-4xl md:text-5xl">Featured Work</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold tracking-tighter">Featured Work</h2>
             <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed">
               Selected projects showcasing product engineering and full-stack capabilities.
             </p>
@@ -148,7 +148,7 @@ export function Projects() {
       {/* Legacy Section */}
       <div className="container px-4 md:px-6 mx-auto">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-           <h2 className="text-2xl font-heading font-bold tracking-tight sm:text-3xl text-muted-foreground/80">
+           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold tracking-tight text-muted-foreground/80">
              How could I have mastered Frontend without these projects?
            </h2>
         </div>

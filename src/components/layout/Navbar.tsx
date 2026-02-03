@@ -103,17 +103,12 @@ export function Navbar() {
                       ))}
                    </div>
                    
-                   <div className="flex gap-4 justify-center border-t border-border pt-6">
-                      <Link href="https://github.com/abdqaadir" target="_blank" className="p-2 bg-secondary rounded-full hover:bg-primary hover:text-primary-foreground transition-colors">
-                         <Github className="w-5 h-5" />
-                      </Link>
-                      <Link href="https://www.linkedin.com/in/quadri-lateef" target="_blank" className="p-2 bg-secondary rounded-full hover:bg-primary hover:text-primary-foreground transition-colors">
-                         <LinkedinIcon className="w-5 h-5" />
-                      </Link>
-                      <Link href="https://twitter.com/mufty_codes" target="_blank" className="p-2 bg-secondary rounded-full hover:bg-primary hover:text-primary-foreground transition-colors">
-                         <X className="w-5 h-5" />
-                      </Link>
-                      <div className="p-2">
+                   <div className="flex gap-4 justify-center items-center border-t border-border pt-6">
+                    <SocialIcon url="https://x.com/mufty_codes" target="_blank" network="x" fgColor="currentColor" bgColor="transparent" style={{ height: 30, width: 30 }} className="p-2 bg-secondary rounded-full hover:bg-primary hover:text-primary-foreground transition-colors" />
+                    <SocialIcon url="https://www.linkedin.com/in/quadri-lateef" target="_blank" network="linkedin" fgColor="currentColor" bgColor="transparent" style={{ height: 30, width: 30 }} className="p-2 bg-secondary rounded-full hover:bg-primary hover:text-primary-foreground transition-colors" />
+                    <SocialIcon url="https://github.com/abdqaadir" target="_blank" network="github" fgColor="currentColor" bgColor="transparent" style={{ height: 30, width: 30 }} className="p-2 bg-secondary rounded-full hover:bg-primary hover:text-primary-foreground transition-colors" />
+
+                    <div className="p-2">
                          <ModeToggle />
                       </div>
                    </div>

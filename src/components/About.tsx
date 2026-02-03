@@ -23,11 +23,11 @@ export function About() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-6">About Me</h2>
-            <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
+            <p className="text-muted-foreground text-base md:text-lg mb-6 leading-relaxed">
               I'm a <strong>Senior Product Focused Engineer</strong> based in Nigeria. While I have deep roots in Frontend Engineering, 
               I have evolved into a full-stack powerhouse capable of architecting complex systems from database to UI.
             </p>
-            <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
+            <p className="text-muted-foreground text-base md:text-lg mb-6 leading-relaxed">
               My technical arsenal includes mastering <strong>Prisma ORM, PostgreSQL (NeonDB), and NestJS</strong> for robust backends, 
               paired with clean, performant frontend code. I focus on building products that solve real-world problems with precision and scalability.
             </p>

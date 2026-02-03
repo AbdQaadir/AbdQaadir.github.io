@@ -10,7 +10,7 @@ export function Hero() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section className="relative flex min-h-[90vh] flex-col items-center justify-center overflow-hidden py-12 md:py-24 lg:py-32">
+    <section className="relative flex min-h-[80vh] md:min-h-[90vh] flex-col items-center justify-center overflow-hidden py-6 md:py-24 lg:py-32">
        {/* Background Elements */}
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-background to-background"></div>
       
@@ -69,7 +69,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-4xl font-heading font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-foreground"
+          className="text-3xl md:text-4xl font-heading font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-foreground"
         >
           Senior Product <br className="hidden md:inline" />
           <span className="text-muted-foreground">Focused Engineer</span>
@@ -79,7 +79,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mx-auto mt-6 max-w-[700px] text-lg text-muted-foreground md:text-xl"
+          className="mx-auto mt-6 max-w-[700px] text-base md:text-lg text-muted-foreground md:text-xl"
         >
           I'm <strong>Quadri Lateef</strong>, a Senior Product Focused Engineer with <strong>5+ years</strong> of experience.
           I build robust, scalable applications using a full arsenal of tools including <strong>NestJS, Prisma, PostgreSQL, and Clerk</strong>.
@@ -89,7 +89,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-10 flex flex-col gap-4 sm:flex-row"
+          className="mt-10 flex gap-4 sm:flex-row flex-wrap"
         >
           <Button size="lg" className="h-12 px-8 text-base" asChild>
             <Link href="#projects">

@@ -17,8 +17,8 @@ export function Contact() {
            viewport={{ once: true }}
            className="max-w-2xl mx-auto space-y-6"
          >
-           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Let's Build Something Amazing</h2>
-           <p className="text-muted-foreground text-lg">
+           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter">Let's Build Something Amazing</h2>
+           <p className="text-muted-foreground text-base md:text-lg">
              I'm currently looking for new opportunities. Whether you have a question, a project idea, 
              or just want to say hi, my inbox is always open.
            </p>
