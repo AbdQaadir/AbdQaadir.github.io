@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight, Download, Eye, Rocket } from "lucide-react";
+import { ArrowDown, ExternalLink, Rocket } from "lucide-react";
 import { TextReveal } from "@/components/ui/text-reveal";
 
 export function Hero() {
@@ -70,9 +70,9 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-extrabold tracking-tight text-foreground"
+          className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-extrabold tracking-tight text-foreground"
         >
-          <span className="text-muted-foreground inline">
+          <span className="text-[20px] sm:text-4xl md:text-5xl lg:text-7xl text-muted-foreground inline">
             <TextReveal>Product-Focused</TextReveal>
           </span>
           <br />  
@@ -97,14 +97,14 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="mt-10 flex gap-4 sm:flex-row flex-wrap"
         >
-          <Button size="lg" className="h-12 px-8 md:px-14! text-base rounded-full" asChild>
+          <Button size="lg" className="w-full sm:w-auto h-12 px-8 md:px-14! text-base rounded-full" asChild>
             <Link href="#projects">
-              My Projects <ArrowRight className="ml-2 h-4 w-4" />
+              My Projects <ArrowDown className="ml-2 h-4 w-4" />
             </Link>
           </Button>
-          <Button size="lg" variant="outline" className="h-12 px-8 md:px-14! text-base rounded-full" asChild>
+          <Button size="lg" variant="outline" className="w-full sm:w-auto h-12 px-8 md:px-14! text-base rounded-full" asChild>
             <Link href="https://drive.google.com/file/d/1Xn_NtHLMehPIt7BL5ml4LilHMMuIPLs3/view?usp=sharing" target="_blank">
-              Resume <Eye className="ml-2 h-4 w-4" />
+              Resume <ExternalLink className="ml-2 h-4 w-4" />
             </Link>
           </Button>
         </motion.div>
