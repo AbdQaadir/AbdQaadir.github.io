@@ -87,29 +87,29 @@ function SpotlightCard({ project, index }: { project: any, index: number }) {
 const featuredProjects = [
   {
     title: "Botwys",
-    description: "Track, Organize, and Manage Your Scholarship Applications — deadlines, documents, and progress — all in one place.",
-    tags: ["NestJS", "Prisma", "PostgreSQL", "Product Engineering"],
+    description: "Designed and built a comprehensive scholarship management platform with custom UI components, responsive layouts, and intuitive user flows for tracking applications, deadlines, and documents.",
+    tags: ["React", "UI/UX", "Design System", "Full Stack"],
     liveUrl: "https://www.botwys.com",
     image: "/assets/projects/botwys.png"
   },
   {
     title: "Tanzeef",
-    description: "Simplifies purifying bank interest (riba). Intelligently extracts details from alerts to help you record and purify earnings.",
-    tags: ["NestJS", "OCR", "Fintech", "Full Stack"],
+    description: "Crafted a clean, accessible fintech interface with OCR-powered alert parsing. Built reusable form components and data visualization for tracking and purifying bank interest (riba).",
+    tags: ["Next.js", "TypeScript", "UI Components", "Fintech"],
     liveUrl: "https://tanzeef.app/",
     image: "/assets/projects/tanzeef.png"
   },
   {
     title: "Satlat",
-    description: "Geospatial solutions company transforming Earth data into actionable information for environmental challenges.",
-    tags: ["Web Dev", "Corporate", "Geospatial"],
+    description: "Developed a modern corporate website with smooth animations, responsive design, and optimized performance. Focused on professional aesthetics and user experience.",
+    tags: ["Web Dev", "UI/UX", "Animations", "Corporate"],
     liveUrl: "http://satlat.com/",
     image: "/assets/projects/satlat.png"
   },
   {
     title: "MuftyBrands",
-    description: "E-commerce platform for antiglare glasses and accessories. Optimizing the eyewear shopping experience.",
-    tags: ["E-commerce", "Full Stack", "Business", "NestJS", "Prisma", "PostgreSQL", "Product Engineering"],
+    description: "Built a complete e-commerce platform with custom product galleries, shopping cart UI, checkout flows, and admin dashboard. Implemented design system for consistent brand experience.",
+    tags: ["E-commerce", "React", "Design System", "Full Stack"],
     liveUrl: "https://www.muftybrands.com",
     image: "/assets/projects/muftybrands.png"
   },

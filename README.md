@@ -1,6 +1,6 @@
-# Quadri Lateef - Senior Product Focused Engineer
+# Quadri Lateef - Product-Focused UI Engineer
 
-The comprehensive portfolio of **Quadri Lateef**, a Senior Product Focused Engineer specialized in building robust, scalable applications with NestJS, Prisma, and React.
+The comprehensive portfolio of **Quadri Lateef**, a Senior Product-Focused UI Engineer specialized in crafting premium user interfaces, design systems, and complete product experiences with React, Next.js, and modern frontend technologies.
 
 ![Portfolio Preview](/public/web-app-manifest-512x512.png)
 

@@ -73,11 +73,11 @@ export function Hero() {
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-extrabold tracking-tight text-foreground"
         >
           <span className="text-muted-foreground inline">
-            <TextReveal>Product Focused</TextReveal>
+            <TextReveal>Product-Focused</TextReveal>
           </span>
           <br />  
           <span className="text-primary inline">
-            <TextReveal>Engineer</TextReveal>
+            <TextReveal>UI Engineer</TextReveal>
           </span>
         </motion.h1>
 
@@ -87,8 +87,8 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mx-auto mt-6 max-w-[700px] text-base md:text-xl text-muted-foreground"
         >
-          I'm <strong>Quadri Lateef</strong>, a Senior Product Focused Engineer with <strong>5+ years</strong> of experience.
-          I build robust, scalable applications using a full arsenal of tools including <strong>NextJS, NestJS, Prisma, PostgreSQL, and Clerk</strong>.
+          I'm <strong>Quadri Lateef</strong>, a Senior Product-Focused UI Engineer with <strong>5+ years</strong> of experience.
+          I craft premium user interfaces and design systems using <strong>React, Next.js, TypeScript, Tailwind, and Framer Motion</strong> — with full-stack capabilities to ship complete products.
         </motion.p>
 
         <motion.div
