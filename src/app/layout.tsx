@@ -19,7 +19,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://abdqaadir.github.io'),
-  title: "Quadri Lateef | Senior Product Product Engineer",
+  title: "Quadri Lateef | Senior Product Engineer",
   description: "Portfolio of Quadri Lateef, a Senior Product Focused Engineer specialized in building robust, scalable applications with NestJS, Prisma, and React.",
   keywords: ["Quadri Lateef", "Senior Product Engineer", "Full Stack Developer", "NestJS", "Prisma", "React", "Next.js", "Frontend Developer Nigeria"],
   manifest: "/manifest.json",
@@ -31,12 +31,12 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://abdqaadir.github.io",
-    title: "Quadri Lateef | Senior Product Product Engineer",
+    title: "Quadri Lateef | Senior Product Engineer",
     description: "Portfolio of Quadri Lateef, a Senior Product Focused Engineer specialized in building robust, scalable applications.",
     siteName: "Quadri Lateef Portfolio",
     images: [
       {
-        url: "/web-app-manifest-512x512.png", // Using the large icon as OG image fallback for now
+        url: "/my-og-image.png", // Using the large icon as OG image fallback for now
         width: 512,
         height: 512,
         alt: "Quadri Lateef Portfolio",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Quadri Lateef | Senior Product Product Engineer",
+    title: "Quadri Lateef | Senior Product Engineer",
     description: "Senior Product Focused Engineer building the future with code.",
     creator: "@mufty_codes",
     images: ["/web-app-manifest-512x512.png"],
